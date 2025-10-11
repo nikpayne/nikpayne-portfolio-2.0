@@ -14,7 +14,6 @@ import {
 import { projects } from "../projects/constants";
 
 export default function Projects() {
-
   return (
     <Container maxW="container.xl" py={20}>
       <Stack gap={8}>
@@ -38,15 +37,27 @@ export default function Projects() {
           {projects.map((project) => (
             <Card.Root key={project.id} variant="outline" overflow="hidden">
               {/* Image placeholder since actual images aren't available yet */}
-              <Box h="240px" bg="gray.200" display="flex" alignItems="center" justifyContent="center">
-                <Text color="gray.500" fontWeight="medium">{project.title} - Image Placeholder</Text>
+              <Box
+                h="240px"
+                bg="gray.200"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Text color="gray.500" fontWeight="medium">
+                  {project.title} - Image Placeholder
+                </Text>
               </Box>
               <Card.Body p={6}>
                 <Stack gap={4}>
                   <HStack justify="space-between" align="start">
                     <Box>
-                      <Heading size="lg" mb={1}>{project.title}</Heading>
-                      <Text fontSize="sm" color="gray.500">{project.duration}</Text>
+                      <Heading size="lg" mb={1}>
+                        {project.title}
+                      </Heading>
+                      <Text fontSize="sm" color="gray.500">
+                        {project.duration}
+                      </Text>
                     </Box>
                     <Badge colorScheme="blue" variant="subtle">
                       {project.category}
@@ -59,7 +70,12 @@ export default function Projects() {
 
                   {project.metrics && (
                     <Box>
-                      <Text fontSize="sm" fontWeight="medium" mb={2} color="gray.700">
+                      <Text
+                        fontSize="sm"
+                        fontWeight="medium"
+                        mb={2}
+                        color="gray.700"
+                      >
                         Key Results:
                       </Text>
                       <Stack gap={1}>
@@ -73,7 +89,12 @@ export default function Projects() {
                   )}
 
                   <Box>
-                    <Text fontSize="sm" fontWeight="medium" mb={2} color="gray.700">
+                    <Text
+                      fontSize="sm"
+                      fontWeight="medium"
+                      mb={2}
+                      color="gray.700"
+                    >
                       Technologies:
                     </Text>
                     <HStack wrap="wrap" gap={2}>
@@ -85,18 +106,18 @@ export default function Projects() {
                     </HStack>
                   </Box>
 
-                  {project.ctaText && (
-                    project.ctaUrl ? (
-                      <Link 
+                  {project.ctaText &&
+                    (project.ctaUrl ? (
+                      <Link
                         href={project.ctaUrl}
                         target="_blank"
                         textDecoration="none"
                         _hover={{ textDecoration: "none" }}
                       >
-                        <Button 
-                          variant="outline" 
+                        <Button
+                          variant="outline"
                           colorScheme="brand"
-                          size="sm" 
+                          size="sm"
                           mt={4}
                           width="full"
                         >
@@ -104,16 +125,15 @@ export default function Projects() {
                         </Button>
                       </Link>
                     ) : (
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         colorScheme="brand"
-                        size="sm" 
+                        size="sm"
                         mt={4}
                       >
                         {project.ctaText}
                       </Button>
-                    )
-                  )}
+                    ))}
                 </Stack>
               </Card.Body>
             </Card.Root>
