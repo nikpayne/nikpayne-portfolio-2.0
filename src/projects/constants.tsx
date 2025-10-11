@@ -1,0 +1,240 @@
+import { Text } from "@chakra-ui/react";
+import campingChecklistImg from "../assets/projects/camping-checklist.png";
+import androidAutoImg from "../assets/projects/android-auto.jpg";
+import touchlessParkingImg from "../assets/projects/touchless-parking.jpg";
+import spotheroWebImg from "../assets/projects/spothero-web.jpg";
+import lyft95Img from "../assets/projects/lyft-95.png";
+import gammaImg from "../assets/projects/gamma.png";
+
+export interface Project {
+  id: string;
+  title: string;
+  duration: string;
+  imageUrl: string;
+  imageAlt: string;
+  category: string;
+  technologies: string[];
+  metrics?: string[];
+  description: React.ReactNode;
+  ctaText?: string;
+  ctaUrl?: string;
+}
+
+export const projects: Project[] = [
+  {
+    id: "gamma",
+    title: "Gamma",
+    duration: "2022 - present",
+    imageUrl: gammaImg,
+    imageAlt:
+      "Gamma presentation platform interface showing doc-to-deck conversion",
+    category: "SaaS Platform",
+    technologies: ["React", "TypeScript", "Node.js", "AI/ML"],
+    description: (
+      <>
+        <Text mb={4}>
+          I'm currently working with a small, talented team on the future of
+          slide decks. Gamma lets you write content like a doc, and present it
+          like a deck. Think: Pitch meets Notion.
+        </Text>
+        <Text>Free yourself from slides, and give it a try 😊.</Text>
+      </>
+    ),
+    ctaText: "Try Gamma",
+    ctaUrl: "https://gamma.app",
+  },
+  {
+    id: "camping-checklist-pro",
+    title: "Camping Checklist Pro",
+    duration: "2021 - present",
+    imageUrl: campingChecklistImg,
+    imageAlt:
+      "Camping Checklist Pro mobile app interface showing outdoor gear organization",
+    category: "Mobile App",
+    technologies: ["React Native", "iOS", "Android", "App Store"],
+    metrics: [
+      "5,000+ downloads",
+      "4.87★ rating (71 reviews)",
+      "Available in US, Canada, UK, Australia, Germany",
+    ],
+    description: (
+      <>
+        <Text mb={4}>
+          I love camping and backpacking. In fall of 2020 I went looking for a
+          good, mobile-optimized camping checklist. The options online and in
+          the App Store were disappointing, and I figure I could make something
+          better.
+        </Text>
+        <Text>
+          In short, I did. "Camping Checklist - Pro" has had{" "}
+          <Text as="span" fontWeight="bold">
+            5,000+ downloads
+          </Text>{" "}
+          across the US, Canada, UK, Australia and weirdly—Germany.
+        </Text>
+      </>
+    ),
+    ctaText: "Download on the App Store",
+  },
+  {
+    id: "spothero-android-auto",
+    title: "SpotHero for Android Auto",
+    duration: "2020",
+    imageUrl: androidAutoImg,
+    imageAlt:
+      "SpotHero Android Auto interface showing parking reservation in connected car",
+    category: "Automotive/Mobile",
+    technologies: [
+      "Android Auto",
+      "Google Partnership",
+      "Mobile UI",
+      "Connected Car",
+    ],
+    metrics: [
+      "1,000+ beta signups",
+      "World's first parking app for connected car",
+    ],
+    description: (
+      <>
+        <Text mb={4}>
+          I owned design on SpotHero's partner project with Google to build{" "}
+          <Text as="span" fontWeight="bold">
+            one of the world's first parking apps for connected car
+          </Text>
+          .
+        </Text>
+        <Text mb={4}>
+          Our V1 beta simplified navigation and redemption for SpotHero users,
+          and our V2 release added the ability to find and pay for parking
+          entirely in-car.
+        </Text>
+        <Text>
+          While adoption is still early and limited, the project yielded{" "}
+          <Text as="span" fontWeight="bold">
+            1,000+ beta signups
+          </Text>{" "}
+          and good press for SpotHero. It's a big step towards safer, and truly
+          hands-free parking experiences.
+        </Text>
+      </>
+    ),
+    ctaText: "Read Case Study",
+  },
+  {
+    id: "spothero-touchless-parking",
+    title: "SpotHero Touchless Parking",
+    duration: "2020",
+    imageUrl: touchlessParkingImg,
+    imageAlt:
+      "SpotHero touchless parking interface showing contactless parking solutions",
+    category: "Product Management",
+    technologies: [
+      "Mobile App",
+      "Product Strategy",
+      "COVID Response",
+      "Team Leadership",
+    ],
+    metrics: ["5 cross-functional teams", "Company-wide research initiative"],
+    description: (
+      <>
+        <Text mb={4}>
+          When the pandemic hit, I led SpotHero's research and design on
+          communication and new product functionality addressing COVID-19 safety
+          concerns, and{" "}
+          <Text as="span" fontWeight="bold">
+            project-managed the effort across 5 teams
+          </Text>
+          .
+        </Text>
+        <Text>
+          My research was shared across the company, and the project led to the
+          creation of our new "touchless parking" redemption category & quick
+          filters, as well as a blog post and email campaign outlining our
+          efforts.
+        </Text>
+      </>
+    ),
+    ctaText: "Read Case Study",
+  },
+  {
+    id: "spothero-web-renovation",
+    title: "SpotHero Web Renovation",
+    duration: "2019",
+    imageUrl: spotheroWebImg,
+    imageAlt:
+      "SpotHero website redesign showing before and after interface improvements",
+    category: "Web Design",
+    technologies: ["React", "Web Design", "UX Research", "A/B Testing"],
+    metrics: [
+      "25% increase in conversion",
+      "67% YOY growth in mobile traffic",
+      "34% growth on desktop",
+    ],
+    description: (
+      <>
+        <Text mb={4}>
+          I owned design on a project to investigate and overhaul SpotHero's low
+          conversion rate on our website. With a small team and 1 FE engineer,
+          we were able to{" "}
+          <Text as="span" fontWeight="bold">
+            increase conversion by 25%
+          </Text>{" "}
+          across both mobile web and desktop, and eliminate numerous usability
+          issues.
+        </Text>
+        <Text>
+          Our work contributed to{" "}
+          <Text as="span" fontWeight="bold">
+            67% YOY growth in traffic
+          </Text>{" "}
+          on mobile web (and 34% on desktop).
+        </Text>
+      </>
+    ),
+    ctaText: "Case Study by Request",
+  },
+  {
+    id: "lyft-windows-95",
+    title: "Lyft for Windows 95",
+    duration: "1994",
+    imageUrl: lyft95Img,
+    imageAlt:
+      "Lyft Windows 95 application interface showing retro ride-sharing software",
+    category: "Legacy Software",
+    technologies: ["Windows 95", "C++", "Desktop Application", "Ride Sharing"],
+    metrics: [
+      "World's first ride-sharing software",
+      "Steve Ballmer collaboration",
+    ],
+    description: (
+      <>
+        <Text mb={4}>
+          One morning in the fall of 1994, I fired up my modem and logged into
+          AOL to find an email from the CEO of Lyft Systems™. He sounded
+          worried. His team had signed a contract to build the world's first
+          "ride-sharing" software application for the yet-unreleased Windows 95
+          😱, but progress was slow and Steve Ballmer was getting impatient.
+        </Text>
+        <Text>
+          With my help, the team finished the software, and the launch of
+          Windows 95 was a{" "}
+          <Text as="span" fontWeight="bold" textDecoration="underline">
+            smash success
+          </Text>
+          .
+        </Text>
+      </>
+    ),
+    ctaText: 'Read "Case Study"',
+  },
+];
+
+// Helper function to get projects by category
+export const getProjectsByCategory = (category: string) => {
+  return projects.filter((project) => project.category === category);
+};
+
+// Helper function to get featured projects (you can customize this logic)
+export const getFeaturedProjects = () => {
+  return projects.slice(0, 3);
+};
