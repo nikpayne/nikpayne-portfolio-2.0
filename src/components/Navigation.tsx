@@ -1,5 +1,11 @@
-import { Box, Container, Flex, Heading, HStack, Text } from "@chakra-ui/react";
-import { Switch } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  HStack,
+  IconButton,
+} from "@chakra-ui/react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { useColorMode } from "../contexts/ColorModeContext";
 
@@ -10,7 +16,6 @@ export default function Navigation() {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
-    { label: "Projects", path: "/projects" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -50,20 +55,14 @@ export default function Navigation() {
               ))}
             </HStack>
 
-            <HStack gap={2} align="center">
-              <Text fontSize="sm">☀️</Text>
-              <Switch.Root
-                checked={colorMode === "dark"}
-                onCheckedChange={() => toggleColorMode()}
-                size="sm"
-              >
-                <Switch.HiddenInput />
-                <Switch.Control>
-                  <Switch.Thumb />
-                </Switch.Control>
-              </Switch.Root>
-              <Text fontSize="sm">🌙</Text>
-            </HStack>
+            <IconButton
+              onClick={toggleColorMode}
+              variant="ghost"
+              size="sm"
+              aria-label="Toggle color mode"
+            >
+              {colorMode === "light" ? "☀️" : "🌙"}
+            </IconButton>
           </HStack>
         </Flex>
       </Container>

@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { system } from "./theme";
 import { ColorModeProvider } from "./contexts/ColorModeContext";
 import App from "./App.tsx";
+import "./fonts/fonts.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

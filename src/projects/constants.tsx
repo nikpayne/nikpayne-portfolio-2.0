@@ -1,10 +1,11 @@
-import { Text } from "@chakra-ui/react";
+import { Text, Image, Link, Stack, Button } from "@chakra-ui/react";
 import campingChecklistImg from "../assets/projects/camping-checklist.png";
 import androidAutoImg from "../assets/projects/android-auto.jpg";
 import touchlessParkingImg from "../assets/projects/touchless-parking.jpg";
 import spotheroWebImg from "../assets/projects/spothero-web.jpg";
 import lyft95Img from "../assets/projects/lyft-95.png";
 import gammaImg from "../assets/projects/gamma.png";
+import appStore from "../assets/app-store.svg";
 
 export interface Project {
   id: string;
@@ -12,7 +13,6 @@ export interface Project {
   duration: string;
   imageUrl: string;
   imageAlt: string;
-  category: string;
   technologies: string[];
   metrics?: string[];
   description: React.ReactNode;
@@ -28,8 +28,7 @@ export const projects: Project[] = [
     imageUrl: gammaImg,
     imageAlt:
       "Gamma presentation platform interface showing doc-to-deck conversion",
-    category: "SaaS Platform",
-    technologies: ["React", "TypeScript", "Node.js", "AI/ML"],
+    technologies: ["", "TypeScript", "Node.js", "AI/ML"],
     description: (
       <>
         <Text mb={4}>
@@ -50,29 +49,37 @@ export const projects: Project[] = [
     imageUrl: campingChecklistImg,
     imageAlt:
       "Camping Checklist Pro mobile app interface showing outdoor gear organization",
-    category: "Mobile App",
-    technologies: ["React Native", "iOS", "Android", "App Store"],
+    technologies: ["iOS", "Swift UI", "Realm DB", "ASO"],
     metrics: [
       "5,000+ downloads",
       "4.87★ rating (71 reviews)",
       "Available in US, Canada, UK, Australia, Germany",
     ],
     description: (
-      <>
-        <Text mb={4}>
+      <Stack gap={4} align="start">
+        <Text>
           I love camping and backpacking. In fall of 2020 I went looking for a
           good, mobile-optimized camping checklist. The options online and in
-          the App Store were disappointing, and I figure I could make something
+          the App Store were disappointing and I figured I could make something
           better.
         </Text>
         <Text>
-          In short, I did. "Camping Checklist - Pro" has had{" "}
+          200+ hours later, I had learned Switf, and shipped an app. "Camping
+          Checklist - Pro" has had{" "}
           <Text as="span" fontWeight="bold">
-            5,000+ downloads
+            10,000+ downloads
           </Text>{" "}
-          across the US, Canada, UK, Australia and weirdly—Germany.
+          around the world. Primarily the US, Canada, UK, Australia and Germany.
         </Text>
-      </>
+        <Link
+          href="https://apps.apple.com/us/app/camping-checklist-pro/id1564492728"
+          target="_blank"
+          rel="noreferrer"
+          mt={2}
+        >
+          <Image src={appStore} alt="App Store" />
+        </Link>
+      </Stack>
     ),
     ctaText: "Download on the App Store",
   },
@@ -83,13 +90,7 @@ export const projects: Project[] = [
     imageUrl: androidAutoImg,
     imageAlt:
       "SpotHero Android Auto interface showing parking reservation in connected car",
-    category: "Automotive/Mobile",
-    technologies: [
-      "Android Auto",
-      "Google Partnership",
-      "Mobile UI",
-      "Connected Car",
-    ],
+    technologies: ["Android", "Android Auto", "Connected car", "0 → 1"],
     metrics: [
       "1,000+ beta signups",
       "World's first parking app for connected car",
@@ -127,7 +128,6 @@ export const projects: Project[] = [
     imageUrl: touchlessParkingImg,
     imageAlt:
       "SpotHero touchless parking interface showing contactless parking solutions",
-    category: "Product Management",
     technologies: [
       "Mobile App",
       "Product Strategy",
@@ -163,7 +163,6 @@ export const projects: Project[] = [
     imageUrl: spotheroWebImg,
     imageAlt:
       "SpotHero website redesign showing before and after interface improvements",
-    category: "Web Design",
     technologies: ["React", "Web Design", "UX Research", "A/B Testing"],
     metrics: [
       "25% increase in conversion",
@@ -171,8 +170,8 @@ export const projects: Project[] = [
       "34% growth on desktop",
     ],
     description: (
-      <>
-        <Text mb={4}>
+      <Stack gap={4} align="start">
+        <Text>
           I owned design on a project to investigate and overhaul SpotHero's low
           conversion rate on our website. With a small team and 1 FE engineer,
           we were able to{" "}
@@ -189,7 +188,8 @@ export const projects: Project[] = [
           </Text>{" "}
           on mobile web (and 34% on desktop).
         </Text>
-      </>
+        <Button disabled={true}>Case Study by Request</Button>
+      </Stack>
     ),
     ctaText: "Case Study by Request",
   },
@@ -200,15 +200,14 @@ export const projects: Project[] = [
     imageUrl: lyft95Img,
     imageAlt:
       "Lyft Windows 95 application interface showing retro ride-sharing software",
-    category: "Legacy Software",
-    technologies: ["Windows 95", "C++", "Desktop Application", "Ride Sharing"],
+    technologies: ["Windows 95", "C++", "Desktop", "Trolling"],
     metrics: [
       "World's first ride-sharing software",
       "Steve Ballmer collaboration",
     ],
     description: (
-      <>
-        <Text mb={4}>
+      <Stack gap={4}>
+        <Text>
           One morning in the fall of 1994, I fired up my modem and logged into
           AOL to find an email from the CEO of Lyft Systems™. He sounded
           worried. His team had signed a contract to build the world's first
@@ -218,21 +217,22 @@ export const projects: Project[] = [
         <Text>
           With my help, the team finished the software, and the launch of
           Windows 95 was a{" "}
-          <Text as="span" fontWeight="bold" textDecoration="underline">
+          <Link
+            fontWeight="bold"
+            textDecoration="underline"
+            href="https://www.youtube.com/watch?v=lAkuJXGldrM"
+            target="_blank"
+            rel="noreferrer"
+          >
             smash success
-          </Text>
+          </Link>
           .
         </Text>
-      </>
+      </Stack>
     ),
     ctaText: 'Read "Case Study"',
   },
 ];
-
-// Helper function to get projects by category
-export const getProjectsByCategory = (category: string) => {
-  return projects.filter((project) => project.category === category);
-};
 
 // Helper function to get featured projects (you can customize this logic)
 export const getFeaturedProjects = () => {

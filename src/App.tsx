@@ -3,7 +3,6 @@ import { Box } from "@chakra-ui/react";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -12,7 +11,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
       </Routes>
     </Box>
   );
