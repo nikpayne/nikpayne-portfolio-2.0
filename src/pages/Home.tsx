@@ -20,17 +20,14 @@ export default function Home() {
     <Box>
       {/* Hero Section */}
       <Box py="20vh">
-        <Container maxW="5xl">
+        <Container maxW="6xl">
           <Stack gap={6} align="start">
             <Stack>
-              <Stack flex="1">
+              <Stack flex="1" gap={4} align="start">
                 <Heading size="7xl">Nik Payne</Heading>
                 <Heading size="3xl">
-                  Product designer, product manager, FE engineer—whatever it
-                  takes
+                  Product designer, product manager, engineer—whatever it takes
                 </Heading>
-              </Stack>
-              <Stack flex="1">
                 <Text fontSize="lg">
                   Product designer and customer-obsessed product person.
                   Currently working on core product and ai work at working at{" "}
@@ -44,7 +41,6 @@ export default function Home() {
                   </Link>
                   , a medium to replace slide decks. I live in 📍 San Francisco.
                 </Text>
-
                 <TypingText />
 
                 <Link
@@ -65,7 +61,7 @@ export default function Home() {
       <Box py={20}>
         <Container maxW="6xl">
           <Stack gap={12}>
-            <Heading size="4xl" mb={4}>
+            <Heading size="6xl" mb={4}>
               Featured Work
             </Heading>
 

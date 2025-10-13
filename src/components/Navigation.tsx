@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Container,
   Flex,
   Heading,
@@ -8,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { useColorMode } from "../contexts/ColorModeContext";
+import { useState, useEffect, useRef } from "react";
 
 export default function Navigation() {
   const location = useLocation();
@@ -63,6 +65,8 @@ export default function Navigation() {
             >
               {colorMode === "light" ? "☀️" : "🌙"}
             </IconButton>
+
+            <Button>Do not click this button</Button>
           </HStack>
         </Flex>
       </Container>

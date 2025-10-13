@@ -17,7 +17,13 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card.Root key={project.id} variant="outline" my="8vh" border="none">
+    <Card.Root
+      key={project.id}
+      variant="outline"
+      my="8vh"
+      border="none"
+      bg="none"
+    >
       <Card.Body p={6}>
         <HStack gap={8}>
           <Flex flex="1">

@@ -6,13 +6,21 @@ export const system = createSystem(defaultConfig, {
     recipes: {
         text: {
           base: {
-            color: { _light: "gray.800", _dark: "gray.300" },
+            color: { _light: "gray.800", _dark: "gray.400" },
+            textWrap: 'pretty',
+            fontWeight: '500'
           },
         },
         heading: {
           base: {
             color: { _light: "gray.900", _dark: "white" },
-            fontWeight: '400'
+            fontWeight: '500'
+          },
+        },
+        badge: {
+          base: {
+            color: { _light: "gray.800", _dark: "gray.400" },
+            fontWeight: '500'
           },
         },
     },
@@ -58,9 +66,23 @@ export const system = createSystem(defaultConfig, {
         }
       },
       fonts: {
-        heading: { value: "'Founders Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" },
-        body: { value: "'Founders Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" }
+        heading: { value: "'PP Neue Montreal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" },
+        body: { value: "'PP Neue Montreal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" }
       },
+      fontSizes: {
+        xs: { value: "0.75rem" },    // 12px
+        sm: { value: "0.875rem" },   // 14px
+        md: { value: "1rem" },       // 16px (base)
+        lg: { value: "1.125rem" },   // 18px
+        xl: { value: "1.25rem" },    // 20px
+        "2xl": { value: "1.5rem" },  // 24px
+        "3xl": { value: "1.875rem" }, // 30px
+        "4xl": { value: "2.5rem" },  // 36px
+        "5xl": { value: "3rem" },     // 48px
+        "6xl": { value: "4rem" },  // 60px
+        "7xl": { value: "5rem" },   // 72px
+        "8xl": { value: "6rem" },   // 72px
+      }
     }
   }
 })

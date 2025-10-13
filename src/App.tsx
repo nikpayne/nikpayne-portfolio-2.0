@@ -6,7 +6,7 @@ import About from "./pages/About";
 
 function App() {
   return (
-    <Box minH="100vh" bg={{ base: "gray.50", _dark: "gray.950" }}>
+    <Box minH="100vh" bg={{ base: "gray.100", _dark: "gray.900" }}>
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />

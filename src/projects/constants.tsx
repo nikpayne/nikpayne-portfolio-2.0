@@ -96,8 +96,21 @@ export const projects: Project[] = [
       "World's first parking app for connected car",
     ],
     description: (
-      <>
-        <Text mb={4}>
+      <Stack gap={4}>
+        <Text>
+          SpotHero partnered with Google to create one of the world’s first
+          connected-car parking apps. I led design.
+        </Text>
+        <Text>
+          Our V1 beta streamlined navigation and redemption for SpotHero users,
+          while V2 enabled finding and paying for parking entirely in-car.
+        </Text>
+        <Text>
+          Though success is hard to quantify for an emerging platform, the
+          launch drew over 1,000 beta signups and positive press for SpotHero. A
+          meaningful step toward safer, truly hands-free parking experiences.
+        </Text>
+        {/* <Text mb={4}>
           I owned design on SpotHero's partner project with Google to build{" "}
           <Text as="span" fontWeight="bold">
             one of the world's first parking apps for connected car
@@ -116,8 +129,8 @@ export const projects: Project[] = [
           </Text>{" "}
           and good press for SpotHero. It's a big step towards safer, and truly
           hands-free parking experiences.
-        </Text>
-      </>
+        </Text> */}
+      </Stack>
     ),
     ctaText: "Read Case Study",
   },
@@ -136,23 +149,18 @@ export const projects: Project[] = [
     ],
     metrics: ["5 cross-functional teams", "Company-wide research initiative"],
     description: (
-      <>
-        <Text mb={4}>
-          When the pandemic hit, I led SpotHero's research and design on
-          communication and new product functionality addressing COVID-19 safety
-          concerns, and{" "}
-          <Text as="span" fontWeight="bold">
-            project-managed the effort across 5 teams
-          </Text>
-          .
+      <Stack gap={4}>
+        <Text>
+          When the pandemic hit, I led SpotHero’s research and design efforts
+          around COVID-19 safety.
         </Text>
         <Text>
-          My research was shared across the company, and the project led to the
-          creation of our new "touchless parking" redemption category & quick
-          filters, as well as a blog post and email campaign outlining our
-          efforts.
+          My research informed company-wide decisions, and I designed and
+          launched a new “touchless parking” redemption category and in-app
+          quick filters, supported by a blog post and email campaign. I also
+          project-managed the rollout across five product and engineering teams.
         </Text>
-      </>
+      </Stack>
     ),
     ctaText: "Read Case Study",
   },
@@ -172,21 +180,17 @@ export const projects: Project[] = [
     description: (
       <Stack gap={4} align="start">
         <Text>
-          I owned design on a project to investigate and overhaul SpotHero's low
-          conversion rate on our website. With a small team and 1 FE engineer,
-          we were able to{" "}
-          <Text as="span" fontWeight="bold">
-            increase conversion by 25%
-          </Text>{" "}
-          across both mobile web and desktop, and eliminate numerous usability
-          issues.
+          I led design on a project to overhaul SpotHero’s website and address
+          low conversion rates.
         </Text>
         <Text>
-          Our work contributed to{" "}
-          <Text as="span" fontWeight="bold">
-            67% YOY growth in traffic
-          </Text>{" "}
-          on mobile web (and 34% on desktop).
+          Working with a small team and one front-end engineer, we improved
+          conversion by 25% across mobile web and desktop by resolving usability
+          issues, adressing user questions, and A/B testing.
+        </Text>
+        <Text>
+          Our work also contributed to 67% year-over-year growth in mobile web
+          traffic and 34% on desktop.
         </Text>
         <Button disabled={true}>Case Study by Request</Button>
       </Stack>
@@ -209,14 +213,16 @@ export const projects: Project[] = [
       <Stack gap={4}>
         <Text>
           One morning in the fall of 1994, I fired up my modem and logged into
-          AOL to find an email from the CEO of Lyft Systems™. He sounded
-          worried. His team had signed a contract to build the world's first
-          "ride-sharing" software application for the yet-unreleased Windows 95
-          😱, but progress was slow and Steve Ballmer was getting impatient.
+          AOL to find an email from the CEO of Lyft Systems™.
         </Text>
         <Text>
-          With my help, the team finished the software, and the launch of
-          Windows 95 was a{" "}
+          He sounded worried. His team had signed a contract to build the
+          world’s first “ride-sharing” app for the yet-unreleased Windows 95,
+          but progress had stalled and Steve Ballmer was getting impatient.
+        </Text>
+        <Text>
+          I stepped in as design lead, the team shipped on time, and the Windows
+          95 launch was a{" "}
           <Link
             fontWeight="bold"
             textDecoration="underline"

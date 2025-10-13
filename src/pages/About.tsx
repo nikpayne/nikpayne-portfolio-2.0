@@ -15,7 +15,7 @@ import aboutImg from "../assets/about/about-photo.jpg";
 
 export default function About() {
   return (
-    <Box>
+    <Box position="relative">
       {/* About Me Section */}
       <Container maxW="4xl" py={32}>
         <Stack gap={8}>
@@ -83,10 +83,10 @@ export default function About() {
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8}>
               {values.map((value) => (
                 <Box key={value.id}>
-                  <Heading size="md" mb={3}>
+                  <Heading size="lg" mb={3}>
                     {value.title}
                   </Heading>
-                  <Box fontSize="md">{value.description}</Box>
+                  <Box fontSize="xl">{value.description}</Box>
                 </Box>
               ))}
             </SimpleGrid>
@@ -119,12 +119,14 @@ export default function About() {
               target="_blank"
               rel="noreferrer"
             >
-              <Button size="lg">+ Connect on Linkedin</Button>
+              <Button size="lg">Connect on Linkedin</Button>
             </Link>
-            .
           </Stack>
         </Container>
       </Box>
+      {/* <Box h="900px" w="1600px" ref={containerRef} bg="red">
+        <Box h="10" w="10" ref={elementRef} bg="white"></Box>
+      </Box> */}
 
       <Footer />
     </Box>

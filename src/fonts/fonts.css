@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 /* Founders Grotesk */
 @font-face {
   font-family: 'Founders Grotesk';
@@ -104,6 +113,55 @@
        url('./gt-america-bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+
+/* PP Neue Montreal */
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('./ppneuemontreal-thin.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('./ppneuemontreal-book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('./ppneuemontreal-italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('./ppneuemontreal-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('./ppneuemontreal-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('./ppneuemontreal-semibolditalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
   font-display: swap;
 }
 

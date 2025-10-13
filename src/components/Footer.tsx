@@ -15,11 +15,11 @@ export default function Footer() {
     <Box as="footer" py={8}>
       <Container maxW="container.xl">
         <HStack justify="space-between" align="center">
-          <Text fontSize="md">© Nik Payne, {currentYear}</Text>
+          <Text fontSize="xl">© Nik Payne, {currentYear}</Text>
 
           <Popover.Root positioning={{ placement: "top" }}>
             <Popover.Trigger asChild>
-              <Button size="md" fontFamily="mono" variant="ghost">
+              <Button size="xl" fontFamily="mono" variant="ghost">
                 &lt;/&gt;
               </Button>
             </Popover.Trigger>
