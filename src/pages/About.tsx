@@ -30,7 +30,7 @@ export default function About() {
             Hi. My Name's Nik
           </Heading>
 
-          <Stack gap={4}>
+          <Stack gap={4} fontSize="xl">
             <Text>
               I'm a SF-based product designer with 6 years of experience
               designing and building product. I grew up in the Santa Cruz
@@ -83,7 +83,7 @@ export default function About() {
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8}>
               {values.map((value) => (
                 <Box key={value.id}>
-                  <Heading size="lg" mb={3}>
+                  <Heading size="xl" mb={3} fontWeight="bold">
                     {value.title}
                   </Heading>
                   <Box fontSize="xl">{value.description}</Box>
@@ -103,8 +103,9 @@ export default function About() {
             <Heading size="5xl">☕ Mentorship</Heading>
             <Text fontSize="xl" lineHeight="tall" maxW="2xl">
               If you need help breaking into design or just want to chat, hit me
-              up. I can't promize I have all the answers but I'm a two-time AIGA
-              mentor and I'm happy to share what I know. Shoot me an email at{" "}
+              up. I can't promise I have all the answers but I am a two-time
+              AIGA mentor and I'm happy to share what I know. Shoot me an email
+              at{" "}
               <Link
                 href="mailto:nikolasapayne@gmail.com"
                 rel="noreferrer"

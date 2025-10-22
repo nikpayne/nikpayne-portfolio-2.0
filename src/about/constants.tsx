@@ -60,11 +60,11 @@ export const values: Value[] = [
   },
   {
     id: "fun",
-    title: "Fun",
+    title: "Having fun",
     description: (
       <Text>
-        It's critical to happiness and creativity. Playfulness and humor make
-        work (and life) way more fun.
+        While I take product seriously, at the end of the day it's just design.
+        You have to have fun along the way.
       </Text>
     ),
   },

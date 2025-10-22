@@ -17,18 +17,15 @@ export const system = createSystem(defaultConfig, {
             fontWeight: '500'
           },
         },
-        badge: {
-          base: {
-            color: { _light: "gray.800", _dark: "gray.400" },
-            fontWeight: '500'
-          },
-        },
     },
     semanticTokens: {
         colors: {
           text: {
             secondary: {
-              value: { _light: '{colors.gray.600}', _dark: '{colors.gray.400}' }
+              value: { _light: '{colors.gray.500}', _dark: '{colors.gray.400}' }
+            },
+            tertiary: {
+              value: { _light: '{colors.gray.500}', _dark: '{colors.gray.500}' }
             }
           },
         }

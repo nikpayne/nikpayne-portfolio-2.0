@@ -2,40 +2,44 @@ import { Text } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 
 const activities = [
-  "Organizing Linear tickets into milestones",
-  "Building code prototypes in React",
-  "Talking to customers in Canny (our feedback platform)",
-  "Building out research megafiles in FigJam",
-  "Taking continuous discovery calls with power users",
-  "Using Claude to help me write SQL",
-  "Building metabase dashboards to see if we're on the right track",
-  "Shipping polish PRs to Gamma's repo",
-  "Making low-fidelity wireframes in FigJam",
-  "Drafting success criteria for our new beta feature",
-  "Building opportunity solution trees in FigJam",
-  "Putting together a research deck to share in show and tell",
-  "Sitting in on sales calls",
-  "Staffing the Gamma booth at dreamforce",
-  "Turning on feature flags in LaunchDarkly",
-  "Having desk conversations with my engineers",
-  "Reporting bugs in our #bugs channel",
-  "Talking with our power users in our Gambassador slack",
-  "Building simple RICE models",
-  "Running Yarn to fix my local environment",
-  "Managing my API keys in Claude",
-  "Writing posts for our changelog",
-  "Working on a first draft of product principles (wow they're hard)",
-  "Pitching new features to the team",
-  "Analyzing written feedback for our AI generator",
-  "Defining categories for a classifier to classify prompts",
-  "Designing upsells",
-  "Hanging out with the design team",
-  "Going to design team standup",
-  "Going to product team standup",
-  "Vibe coding a drag interaction for a pages panel",
-  "Inspecting font metadata to write a categorizer function",
-  "Futzing with REM values",
-  "Making brand imagery in MidJourney using our refs",
+  "organizing Linear tickets into milestones",
+  "building code prototypes in React",
+  "talking to customers in Canny (our feedback platform)",
+  "building out research megafiles in FigJam",
+  "taking continuous discovery calls with power users",
+  "using Claude to help me write SQL",
+  "building metabase dashboards",
+  "shipping polish PRs to Gamma's repo",
+  "making low-fidelity wireframes in FigJam",
+  "drafting success criteria for our new beta feature",
+  "building opportunity solution trees in FigJam",
+  "putting together a research deck to share in show and tell",
+  "sitting in on sales calls with large companies",
+  "staffing the Gamma booth at dreamforce",
+  "turning on feature flags in LaunchDarkly",
+  "having desk conversations with my engineers",
+  "reporting bugs in our #bugs channel",
+  "talking with our power users in our Gambassador slack",
+  "building simple RICE models",
+  "running Yarn to fix my local environment",
+  "managing my API keys in Claude",
+  "writing posts for our changelog",
+  "working on a first draft of product principles (wow they're hard)",
+  "pitching new features to the team",
+  "analyzing written feedback for our AI generator",
+  "defining categories for a classifier to classify prompts",
+  "designing upsells",
+  "hanging out with the design team",
+  "going to design team standup",
+  "going to product team standup",
+  "vibe coding a drag interaction for a pages panel",
+  "inspecting font metadata to write a categorizer function",
+  "futzing with REM values",
+  "making brand imagery in MidJourney using our refs",
+  "working the Gamma booth at Dreamforce",
+  "joining Akiva on a webinar about workspace templates",
+  "at Disneyland with the rest of the team",
+  "on our annual Tahoe retreat",
 ];
 
 export default function TypingText() {
@@ -79,8 +83,8 @@ export default function TypingText() {
   }, [displayText, activityIndex, isDeleting, typingSpeed]);
 
   return (
-    <Text fontSize="md" fontFamily="mono" color="text.secondary">
-      currently: {displayText}
+    <Text fontSize="md" fontFamily="mono">
+      Currently: {displayText}
       <Text
         as="span"
         opacity={displayText.length > 0 || !isDeleting ? 1 : 0}
