@@ -234,9 +234,20 @@ export const projects: Project[] = [
       "Team Leadership",
     ],
     keyResults: [
-      { value: "5-team", label: "project" },
-      { value: "Company-wide", label: "rollout" },
-      { value: " ", label: " " },
+      {
+        value: "120",
+        label: "Users surveyed on COVID-19 safety and parking behavior",
+      },
+      {
+        value: "5-team",
+        label:
+          "Cross-functional design leadership (iOS, Android, Web, Marketing & PR)",
+      },
+
+      {
+        value: "450%",
+        label: "Increase in in-app filter use among paying customers",
+      },
     ],
     description: (
       <Stack gap={4}>
@@ -273,7 +284,7 @@ export const projects: Project[] = [
       "Lyft Windows 95 application interface showing retro ride-sharing software",
     technologies: ["Windows 95", "C++", "Desktop", "Trolling"],
     keyResults: [
-      { value: "100%", label: "Silly project" },
+      { value: "100%", label: "Totally legit project" },
       { value: "Steve Ballmer", label: "Approved" },
     ],
     description: (
