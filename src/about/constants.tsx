@@ -9,62 +9,81 @@ export interface Value {
 
 export const values: Value[] = [
   {
-    id: "quality",
-    title: "Quality",
+    id: "interdisciplinary-thinking",
+    title: "Interdisciplinary thinking",
     description: (
       <Text>
-        Whether it's an app or a pair of jeans, I value quality. We deserve it,
-        and life's too short for bad product.
+        I'm the opposite of a specialist; my value is as a connector. I've been
+        a PM, engineer, and designer—partly out of selfish curiosity, but also
+        because it helps me collaborate better. At Gamma I sit in both PM and
+        design meetings, and push code when needed.
       </Text>
     ),
   },
   {
-    id: "kindness",
-    title: "Kindness",
+    id: "customer-focus",
+    title: "Relentless customer focus",
     description: (
       <Text>
-        Kindness is important in every context: to coworkers, to customers (in
-        the product), and to yourself.
+        I start every morning in our support forums. "Give the people what they
+        want" started as my strategy pitch and became a running joke at
+        work—mostly because I won't shut up about customer feedback in Slack.
+        IMO solving problems people bring you is 10X simpler and more effective
+        than cooking up strategy decks.
       </Text>
     ),
   },
   {
-    id: "collaboration",
-    title: "Collaboration",
+    id: "iterate-in-public",
+    title: "Iterating in public",
     description: (
       <Text>
-        I value teams that talk. Design is all about information exchange, so
-        collaboration is critical.
+        You can't play the whole chess game in your head. I tend to ship the
+        obvious pieces of a design first, then wait for data and user feedback
+        to clarify and validate next steps. If you let people pull product out
+        of you, you'll rarely ship anything unnecessary.
       </Text>
     ),
   },
   {
-    id: "focus",
-    title: "Focus",
+    id: "simplicity",
+    title: "Less is usually more",
     description: (
       <Text>
-        In my experience, focused teams generally create higher quality product
-        [faster], and have more fun.
+        I'm a minimalist. I grew up on Dieter Rams and Jony Ives, where great
+        design involves boiling away ("less, but better"). I tend to approach
+        product like an optimization problem: how do we achieve maximum customer
+        value with the simplest and most elegant interfaces, code, and business
+        logic.
       </Text>
     ),
   },
+
   {
     id: "going-for-it",
-    title: "Going for It",
+    title: "Finding a way through",
     description: (
       <Text>
-        My favorite work has always involved diving into scary problems I have
-        no idea how to solve.
+        I once helped plan dinner for 1,000 people on a NYC pier using one
+        continuous table. Everything—including fire safety—was riding on a
+        precise layout (my job). The artist only worked in crude ballpoint pen
+        sketches. Shit. I fabricated to-scale wooden models for him to prototype
+        with, taught myself SketchUp and Google Earth, and got it done. There's
+        usually a way through.
       </Text>
     ),
   },
+
   {
     id: "fun",
-    title: "Having fun",
+    title: "Having fun at work",
     description: (
       <Text>
-        While I take product seriously, at the end of the day it's just design.
-        You have to have fun along the way.
+        I take product and design seriously, but at the end of the day it's just
+        software. I like to have fun at work, and the things I'll remember when
+        I'm old were the silly moments—like the time I spent with my coworkers
+        in the hot tub in Tahoe, the jokes we told, and all of the team dinners
+        and outings.
       </Text>
     ),
   },

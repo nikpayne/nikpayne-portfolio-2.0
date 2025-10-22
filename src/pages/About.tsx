@@ -77,7 +77,7 @@ export default function About() {
         <Container maxW="container.xl">
           <Stack gap={12}>
             <Heading size="5xl" textAlign="center">
-              🥑 My Values
+              My operating principles
             </Heading>
 
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8}>
@@ -86,7 +86,7 @@ export default function About() {
                   <Heading size="xl" mb={3} fontWeight="bold">
                     {value.title}
                   </Heading>
-                  <Box fontSize="xl">{value.description}</Box>
+                  <Box fontSize="lg">{value.description}</Box>
                 </Box>
               ))}
             </SimpleGrid>

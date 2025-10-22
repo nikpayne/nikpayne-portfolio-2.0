@@ -51,6 +51,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                   {project.description}
                 </Box>
 
+                {project.cta && <Box mt={6}>{project.cta}</Box>}
+
                 {project.keyResults && project.keyResults.length > 0 && (
                   <HStack gap={6} mt={6} align="flex-start">
                     {project.keyResults.map((result, index) => (
@@ -73,8 +75,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     ))}
                   </HStack>
                 )}
-
-                {project.cta && <Box mt={6}>{project.cta}</Box>}
               </Stack>
             </Flex>
             <Flex flex="1">
