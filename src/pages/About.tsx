@@ -1,6 +1,7 @@
 import {
   Box,
   Heading,
+  HStack,
   Text,
   Stack,
   Image,
@@ -74,20 +75,28 @@ export default function About() {
 
       {/* My Values Section */}
       <Box py={32}>
-        <Container maxW="container.xl">
+        <Container maxW="6xl">
           <Stack gap={12}>
             <Heading size="5xl" textAlign="center">
               My operating principles
             </Heading>
 
-            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8}>
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} gap={8}>
               {values.map((value) => (
-                <Box key={value.id}>
+                <Stack key={value.id}>
                   <Heading size="xl" mb={3} fontWeight="bold">
+                    {" "}
                     {value.title}
                   </Heading>
-                  <Box fontSize="lg">{value.description}</Box>
-                </Box>
+                  {/* <Box> */}
+                  {/* <Heading size="xl" mb={3} fontWeight="bold">
+                      {value.title}
+                    </Heading> */}
+                  <Box fontSize="lg" flex="1.5">
+                    {value.description}
+                  </Box>
+                  {/* </Box> */}
+                </Stack>
               ))}
             </SimpleGrid>
           </Stack>

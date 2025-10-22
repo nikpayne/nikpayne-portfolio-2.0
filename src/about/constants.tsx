@@ -9,20 +9,8 @@ export interface Value {
 
 export const values: Value[] = [
   {
-    id: "interdisciplinary-thinking",
-    title: "Interdisciplinary thinking",
-    description: (
-      <Text>
-        I'm the opposite of a specialist; my value is as a connector. I've been
-        a PM, engineer, and designer—partly out of selfish curiosity, but also
-        because it helps me collaborate better. At Gamma I sit in both PM and
-        design meetings, and push code when needed.
-      </Text>
-    ),
-  },
-  {
     id: "customer-focus",
-    title: "Relentless customer focus",
+    title: "I am problem, and customer-obsessed",
     description: (
       <Text>
         I start every morning in our support forums. "Give the people what they
@@ -34,56 +22,77 @@ export const values: Value[] = [
     ),
   },
   {
-    id: "iterate-in-public",
-    title: "Iterating in public",
+    id: "interdisciplinary-thinking",
+    title: "I work across disciplines",
     description: (
       <Text>
-        You can't play the whole chess game in your head. I tend to ship the
-        obvious pieces of a design first, then wait for data and user feedback
-        to clarify and validate next steps. If you let people pull product out
-        of you, you'll rarely ship anything unnecessary.
+        I'm the opposite of a specialist; my value is as a connector. I've been
+        a PM, engineer, and designer—partly out of selfish curiosity, but also
+        because I belive it helps me collaborate more effectively across
+        disciplines, and think about product more holistically. At Gamma I sit
+        in both PM and design meetings, and push code when needed.
+      </Text>
+    ),
+  },
+  {
+    id: "iterate-in-public",
+    title: "I like building in public",
+    description: (
+      <Text>
+        Product is hard if you try to play the chess game in your head. I tend
+        to ship the obvious pieces of a design first, then wait for data and
+        user feedback to clarify and validate next steps. If you let people pull
+        product out of you, you'll rarely ship anything unnecessary.
       </Text>
     ),
   },
   {
     id: "simplicity",
-    title: "Less is usually more",
+    title: "I believe less is usually more",
     description: (
       <Text>
         I'm a minimalist. I grew up on Dieter Rams and Jony Ives, where great
         design involves boiling away ("less, but better"). I tend to approach
         product like an optimization problem: how do we achieve maximum customer
         value with the simplest and most elegant interfaces, code, and business
-        logic.
+        logic. You can almost always layer on complexity as needed, but working
+        in reverse is usually much harder.
       </Text>
     ),
   },
 
   {
     id: "going-for-it",
-    title: "Finding a way through",
+    title: "I will always do what it takes",
     description: (
       <Text>
-        I once helped plan dinner for 1,000 people on a NYC pier using one
+        {/* I once helped plan dinner for 1,000 people on a NYC pier using one
         continuous table. Everything—including fire safety—was riding on a
         precise layout (my job). The artist only worked in crude ballpoint pen
         sketches. Shit. I fabricated to-scale wooden models for him to prototype
-        with, taught myself SketchUp and Google Earth, and got it done. There's
-        usually a way through.
+        with (using 2x4's and my dad's chopsaw), scraped site images using
+        Google Earch, and taught myself SketchUp/CAD to get it all done. I'll
+        find a way. */}
+        I once helped plan dinner for 1,000 people on a NYC pier using one
+        continuous table. Everything—including fire safety—was riding on a
+        precise layout (my job). The artist only worked in crude ballpoint pen
+        sketches. Shit. I fabricated wooden models from 2x4s using my dad's
+        chopsaw, scraped hi-res site images from Google Earth and taught myself
+        SketchUp to get it done. I'll find a way.
       </Text>
     ),
   },
 
   {
     id: "fun",
-    title: "Having fun at work",
+    title: "I like having fun at work",
     description: (
       <Text>
         I take product and design seriously, but at the end of the day it's just
-        software. I like to have fun at work, and the things I'll remember when
-        I'm old were the silly moments—like the time I spent with my coworkers
-        in the hot tub in Tahoe, the jokes we told, and all of the team dinners
-        and outings.
+        software. The things I'll remember when I'm old were the silly
+        moments—like the time I spent with my coworkers in the hot tub in Tahoe,
+        the jokes we told, and all of the team dinners and outings. I'm picky
+        about where I work because I see work as my second home.
       </Text>
     ),
   },
