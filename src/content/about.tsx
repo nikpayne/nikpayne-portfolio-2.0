@@ -41,9 +41,9 @@ export const values: Value[] = [
       <Text>
         I work iteratively. I typically design a few chess moves ahead (enough
         to set a vision and avoid traps), then ship the obvious pieces of the
-        design first. From there, I let data and user feedback dictate next
-        steps. If you let people pull product out of you, you'll rarely ship
-        anything unnecessary.
+        design first. From there, data and user feedback will usually dictate
+        (and clarify) next steps. If you let people pull product out of you,
+        you'll rarely ship anything unnecessary.
       </Text>
     ),
   },
