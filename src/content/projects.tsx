@@ -15,6 +15,7 @@ import androidAutoImg from "../assets/projects/android-auto.jpg";
 import touchlessParkingImg from "../assets/projects/touchless-parking.jpg";
 import spotheroWebImg from "../assets/projects/spothero-web.jpg";
 import lyft95Img from "../assets/projects/lyft-95.png";
+import lyft95ImgV2 from "../assets/projects/lyft-95-borderless.png";
 import gammaImg from "../assets/projects/gamma.png";
 import appStore from "../assets/app-store.svg";
 import campingChecklistImgV2 from "../assets/projects/camping-checklist-v1.png";
@@ -318,7 +319,7 @@ export const projects: Project[] = [
     id: "lyft-windows-95",
     title: "Lyft for Windows 95",
     duration: "1994",
-    imageUrl: lyft95Img,
+    imageUrl: lyft95ImgV2,
     imageAlt:
       "Lyft Windows 95 application interface showing retro ride-sharing software",
     technologies: ["Windows 95", "C++", "Desktop", "Trolling"],
