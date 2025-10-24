@@ -39,17 +39,21 @@ export function ColorModeProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("chakra-ui-color-mode", colorMode);
 
     // Update theme-color meta tag for iOS
-    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    const themeColor = colorMode === "dark" ? "#1a202c" : "#ffffff";
+    let themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
     if (themeColorMeta) {
-      themeColorMeta.setAttribute(
-        "content",
-        colorMode === "dark" ? "#1a202c" : "#ffffff"
-      );
+      themeColorMeta.setAttribute("content", themeColor);
+    } else {
+      // Create meta tag if it doesn't exist
+      themeColorMeta = document.createElement("meta");
+      themeColorMeta.setAttribute("name", "theme-color");
+      themeColorMeta.setAttribute("content", themeColor);
+      document.head.appendChild(themeColorMeta);
     }
 
     // Update body background color
-    document.body.style.backgroundColor =
-      colorMode === "dark" ? "#1a202c" : "#ffffff";
+    document.body.style.backgroundColor = themeColor;
   }, [colorMode]);
 
   const toggleColorMode = () => {
