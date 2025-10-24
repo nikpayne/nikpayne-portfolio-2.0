@@ -19,9 +19,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card.Root key={project.id} variant="outline" border="none" bg="none">
       <Card.Body
-        minH="90vh"
+        minH="80vh"
         py={{ base: 8, lg: 12 }}
-        p={0}
+        px={0}
         display="flex"
         flexDirection="column"
         justifyContent="center"

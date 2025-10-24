@@ -33,24 +33,18 @@ export default function About() {
               textAlign="center"
               mb={{ base: undefined, md: 10 }}
             >
-              My operating principles
+              How I build products
             </Heading>
 
             <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} gap={8}>
               {values.map((value) => (
                 <Stack key={value.id}>
                   <Heading size="xl" mb={3} fontWeight="bold">
-                    {" "}
                     {value.title}
                   </Heading>
-                  {/* <Box> */}
-                  {/* <Heading size="xl" mb={3} fontWeight="bold">
-                      {value.title}
-                    </Heading> */}
                   <Box fontSize="lg" flex="1.5">
                     {value.description}
                   </Box>
-                  {/* </Box> */}
                 </Stack>
               ))}
             </SimpleGrid>

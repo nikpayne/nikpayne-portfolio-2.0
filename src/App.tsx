@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Box } from "@chakra-ui/react";
 import Navigation from "./components/Navigation";
+import ScrollingBanner from "./components/ScrollingBanner";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      {/* <ScrollingBanner /> */}
     </Box>
   );
 }

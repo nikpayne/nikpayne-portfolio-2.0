@@ -1,5 +1,6 @@
 import {
   Heading,
+  HStack,
   Text,
   Button,
   Stack,
@@ -7,11 +8,13 @@ import {
   Box,
   Link,
   chakra,
+  Separator,
 } from "@chakra-ui/react";
 import { projects } from "../content/projects";
 import ProjectCard from "../components/ProjectCard";
 import Footer from "../components/Footer";
 import TypingText from "../components/TypingText";
+import { ChevronDown } from "lucide-react";
 
 export default function Home() {
   return (
@@ -25,22 +28,29 @@ export default function Home() {
                 <Heading size="6xl">
                   Product designer, product manager, engineer—whatever it takes
                 </Heading>
-                <Text fontSize="2xl">
-                  <chakra.span as="h1" display="inline">
-                    Nik Payne
-                  </chakra.span>{" "}
-                  is a product designer and customer-obsessed product person at{" "}
-                  <Link
-                    href="https://gamma.app"
-                    target="_blank"
-                    rel="noreferrer"
-                    textDecoration="underline"
-                  >
-                    Gamma
-                  </Link>{" "}
-                  working on core product and ai features to replace traditional
-                  slide decks (finally). Based in 📍 San Francisco.
-                </Text>
+                <Stack flexDirection={{ base: "column", md: "row" }}>
+                  <Text fontSize="2xl" flex="3">
+                    <chakra.span as="h1" display="inline">
+                      Nik Payne
+                    </chakra.span>{" "}
+                    is a product designer and customer-obsessed product person
+                    at{" "}
+                    <Link
+                      href="https://gamma.app"
+                      target="_blank"
+                      rel="noreferrer"
+                      textDecoration="underline"
+                    >
+                      Gamma
+                    </Link>{" "}
+                    working on core product and ai features to replace
+                    traditional slide decks (finally).
+                  </Text>
+                  <Stack
+                    flex="2"
+                    display={{ base: "none", md: "block" }}
+                  ></Stack>
+                </Stack>
                 {/* <TypingText />
 
                 <Link
@@ -56,7 +66,8 @@ export default function Home() {
           </Stack>
         </Container>
       </Box>
-      <hr />
+
+      <Separator flex="1" />
 
       {/* Featured Projects Section */}
       <Stack py={20} gap={12} separator={<hr />}>
