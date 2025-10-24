@@ -19,7 +19,6 @@ import gammaImg from "../assets/projects/gamma.png";
 import appStore from "../assets/app-store.svg";
 import campingChecklistImgV2 from "../assets/projects/camping-checklist-v1.png";
 import campingChecklistPdf from "../assets/pdfs/Camping-Checklist-Pro-2025.pdf";
-import spotheroWebPdf from "../assets/pdfs/Spothero-Web-Renovation-2025.pdf";
 
 export interface KeyResult {
   value: React.ReactNode;
@@ -148,10 +147,11 @@ export const projects: Project[] = [
           were disappointing and I figured I could make something better.
         </Text>
         <Text>
-          It took 7 months of free time—but after later—of interviewing friends,
-          designing, prototyping, and watching SwitftUI + Realm DB—I shipped an
-          app. "Camping Checklist - Pro" has had been downloaded by folks all
-          over the world. Primarily the US, Canada, UK, Australia and Germany.
+          It took 7 months of free time—but after many late nights interviewing
+          friends, designing, prototyping, and watching SwifttUI + Realm DB
+          tutorials—I shipped an app. "Camping Checklist - Pro" has been
+          downloaded by folks all over the world. Primarily the US, Canada, UK,
+          Australia and Germany.
         </Text>
         <HStack mt="2" gap={3} alignItems="center" flexWrap="wrap">
           <Link
@@ -206,8 +206,8 @@ export const projects: Project[] = [
         </Text>
         <Text>
           Working with a small team and one front-end engineer, we improved
-          conversion by resolving usability issues, adressing user concerns, and
-          running A/B tests. It also led to the SpotHero Parking guarantee,
+          conversion by resolving usability issues, addressing user concerns,
+          and running A/B tests. It also led to the SpotHero Parking guarantee,
           which I co-wrote with legal.
         </Text>
       </Stack>

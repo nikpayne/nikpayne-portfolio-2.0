@@ -16,8 +16,9 @@ export const values: Value[] = [
         I start every morning in our support forums. "Give the people what they
         want" started as my strategy pitch and became a running joke at
         work—mostly because I won't shut up about customer feedback in Slack.
-        IMO grounding your roadmap in real customer problems (they bring you) is
-        10X simpler and more effective than cooking up strategy decks.
+        Feedback is gold, and IMO grounding your roadmap in real customer
+        problems is 10X simpler and more effective than cooking up strategy
+        decks.
       </Text>
     ),
   },
@@ -28,7 +29,7 @@ export const values: Value[] = [
       <Text>
         I'm the opposite of a specialist; my value is as a connector. I've been
         a PM, engineer, and designer—partly out of selfish curiosity, but also
-        because I belive it helps me collaborate more effectively across
+        because I believe it helps me collaborate more effectively across
         disciplines, and build better product. At Gamma I sit in both PM and
         design meetings, and push code when needed.
       </Text>
