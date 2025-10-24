@@ -20,6 +20,7 @@ import gammaImg from "../assets/projects/gamma.png";
 import appStore from "../assets/app-store.svg";
 import campingChecklistImgV2 from "../assets/projects/camping-checklist-v1.png";
 import campingChecklistPdf from "../assets/pdfs/Camping-Checklist-Pro-2025.pdf";
+import campingChecklistImgV3 from "../assets/projects/camping-checklist-v3.png";
 
 export interface KeyResult {
   value: React.ReactNode;
@@ -124,7 +125,7 @@ export const projects: Project[] = [
     id: "camping-checklist-pro",
     title: "Camping Checklist Pro",
     duration: "2021 - present",
-    imageUrl: campingChecklistImgV2,
+    imageUrl: campingChecklistImgV3,
     imageAlt:
       "Camping Checklist Pro mobile app interface showing outdoor gear organization",
     technologies: ["Design", "Development", "iOS", "Swift UI", "Realm DB"],

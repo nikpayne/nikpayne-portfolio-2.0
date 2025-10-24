@@ -84,6 +84,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 src={project.imageUrl}
                 alt={project.imageAlt}
                 borderRadius="lg"
+                maxH="65vh"
               />
             </Flex>
           </Stack>
