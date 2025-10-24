@@ -21,6 +21,7 @@ import appStore from "../assets/app-store.svg";
 import campingChecklistImgV2 from "../assets/projects/camping-checklist-v1.png";
 import campingChecklistPdf from "../assets/pdfs/Camping-Checklist-Pro-2025.pdf";
 import campingChecklistImgV3 from "../assets/projects/camping-checklist-v3.png";
+import androidAutoUpdatedImg from "../assets/projects/android-auto-upscaled.png";
 
 export interface KeyResult {
   value: React.ReactNode;
@@ -224,7 +225,7 @@ export const projects: Project[] = [
     id: "spothero-android-auto",
     title: "SpotHero for Android Auto",
     duration: "2020",
-    imageUrl: androidAutoImg,
+    imageUrl: androidAutoUpdatedImg,
     imageAlt:
       "SpotHero Android Auto interface showing parking reservation in connected car",
     technologies: ["Android", "Android Auto", "Connected car", "Innovation"],
