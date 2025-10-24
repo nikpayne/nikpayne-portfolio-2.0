@@ -37,6 +37,19 @@ export function ColorModeProvider({ children }: { children: ReactNode }) {
     root.classList.add(colorMode);
     root.setAttribute("data-theme", colorMode);
     localStorage.setItem("chakra-ui-color-mode", colorMode);
+
+    // Update theme-color meta tag for iOS
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute(
+        "content",
+        colorMode === "dark" ? "#1a202c" : "#ffffff"
+      );
+    }
+
+    // Update body background color
+    document.body.style.backgroundColor =
+      colorMode === "dark" ? "#1a202c" : "#ffffff";
   }, [colorMode]);
 
   const toggleColorMode = () => {
