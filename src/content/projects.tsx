@@ -80,14 +80,23 @@ export const projects: Project[] = [
       { value: "50M", label: "Users" },
     ],
     description: (
-      <>
-        <Text mb={4}>
-          I'm currently working with a small, talented team on the future of
-          slide decks. Gamma lets you write content like a doc, and present it
-          like a deck. Think: Pitch meets Notion.
+      <Stack gap={4}>
+        <Text>
+          I currently work at Gamma. Being early means I've gotten to work on an
+          ungodly amount of the product—AI, core product, onboarding,
+          monetization, B2B—across multiple disciplines: research, design,
+          product strategy, and even eng work. I've built the role I want.
         </Text>
-        <Text>Free yourself from slides, and give it a try 😊.</Text>
-      </>
+        <Text>
+          I've also surely made some mistakes that may haunt future teams as we
+          scale 😅. The future is yet to reveal itself.
+        </Text>
+        <Text>
+          Gamma lets you write content like a document and present it like a
+          deck. Think: "Notion on crack" (actual customer quote) but for
+          presentations, and increasingly other media.
+        </Text>
+      </Stack>
     ),
     cta: (
       <Link href="https://gamma.app" target="_blank" rel="noreferrer">
@@ -159,7 +168,7 @@ export const projects: Project[] = [
               <chakra.span id="rating-count-inline">XX</chakra.span>)
             </Text>
             <Text fontSize="sm">
-              Updated <span id="last-updated">recently</span>
+              Updated <span id="last-updated-inline">recently</span>
             </Text>
           </Stack>
         </HStack>
@@ -204,9 +213,9 @@ export const projects: Project[] = [
       </Stack>
     ),
     cta: (
-      <Link href={spotheroWebPdf} target="_blank" rel="noreferrer">
-        <Button size="lg">Read case study</Button>
-      </Link>
+      <Button size="lg" disabled>
+        Case study on request
+      </Button>
     ),
   },
   {
@@ -219,7 +228,7 @@ export const projects: Project[] = [
     technologies: ["Android", "Android Auto", "Connected car", "Innovation"],
     keyResults: [
       {
-        value: "1st",
+        value: "World's 1st",
         label: "Off-street parking app for connected car (to my knowledge)",
       },
       { value: "1,000+", label: "Beta signups" },
@@ -271,7 +280,7 @@ export const projects: Project[] = [
       {
         value: "5-team",
         label:
-          "Cross-functional design leadership (iOS, Android, Web, Marketing & PR)",
+          "Design leadership exercise (coordinating iOS, Android, Web, Marketing & PR)",
       },
 
       {

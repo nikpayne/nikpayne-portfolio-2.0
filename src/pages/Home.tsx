@@ -5,10 +5,8 @@ import {
   Stack,
   Container,
   Box,
-  HStack,
   Link,
-  Wrap,
-  WrapItem,
+  chakra,
 } from "@chakra-ui/react";
 import { projects } from "../content/projects";
 import ProjectCard from "../components/ProjectCard";
@@ -24,13 +22,14 @@ export default function Home() {
           <Stack gap={6} align="start">
             <Stack>
               <Stack flex="1" gap={4} align="start">
-                <Heading size="7xl">Nik Payne</Heading>
-                <Heading size="3xl">
+                <Heading size="6xl">
                   Product designer, product manager, engineer—whatever it takes
                 </Heading>
-                <Text fontSize="lg">
-                  Product designer and customer-obsessed product person.
-                  Currently working on core product and ai work at working at{" "}
+                <Text fontSize="2xl">
+                  <chakra.span as="h1" display="inline">
+                    Nik Payne
+                  </chakra.span>{" "}
+                  is a product designer and customer-obsessed product person at{" "}
                   <Link
                     href="https://gamma.app"
                     target="_blank"
@@ -38,10 +37,11 @@ export default function Home() {
                     textDecoration="underline"
                   >
                     Gamma
-                  </Link>
-                  , a medium to replace slide decks. I live in 📍 San Francisco.
+                  </Link>{" "}
+                  working on core product and ai features to replace traditional
+                  slide decks (finally). Based in 📍 San Francisco.
                 </Text>
-                <TypingText />
+                {/* <TypingText />
 
                 <Link
                   href="https://linkedin.com/in/nikpayne"
@@ -50,29 +50,22 @@ export default function Home() {
                   _hover={{ textDecoration: "none" }}
                 >
                   <Button variant="solid">+ Add me on Linkedin</Button>
-                </Link>
+                </Link> */}
               </Stack>
             </Stack>
           </Stack>
         </Container>
       </Box>
+      <hr />
 
       {/* Featured Projects Section */}
-      <Box py={20}>
-        <Container maxW="6xl">
-          <Stack gap={12}>
-            <Heading size="6xl" mb={4}>
-              Featured Work
-            </Heading>
-
-            <Stack gap={6}>
-              {projects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </Stack>
-          </Stack>
-        </Container>
-      </Box>
+      <Stack py={20} gap={12} separator={<hr />}>
+        {projects.map((project) => (
+          <Container maxW="6xl">
+            <ProjectCard key={project.id} project={project} />
+          </Container>
+        ))}
+      </Stack>
 
       <Footer />
     </Box>

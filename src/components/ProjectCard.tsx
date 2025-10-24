@@ -18,9 +18,20 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card.Root key={project.id} variant="outline" border="none" bg="none">
-      <Card.Body minH="90vh" p={0}>
+      <Card.Body
+        minH="90vh"
+        py={{ base: 8, lg: 12 }}
+        p={0}
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+      >
         <Stack gap={8}>
-          <HStack gap={8} align="flex-start">
+          <Stack
+            gap={8}
+            align="flex-start"
+            flexDirection={{ base: "column-reverse", lg: "row" }}
+          >
             <Flex flex="1">
               <Stack gap={4}>
                 <Stack gap="3">
@@ -75,11 +86,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 borderRadius="lg"
               />
             </Flex>
-          </HStack>
+          </Stack>
 
-          {project.extraContent && (
+          {/* {project.extraContent && (
             <Box width="100%">{project.extraContent}</Box>
-          )}
+          )} */}
         </Stack>
       </Card.Body>
     </Card.Root>

@@ -67,13 +67,6 @@ export const values: Value[] = [
     title: "I will always do what it takes",
     description: (
       <Text>
-        {/* I once helped plan dinner for 1,000 people on a NYC pier using one
-        continuous table. Everything—including fire safety—was riding on a
-        precise layout (my job). The artist only worked in crude ballpoint pen
-        sketches. Shit. I fabricated to-scale wooden models for him to prototype
-        with (using 2x4's and my dad's chopsaw), scraped site images using
-        Google Earch, and taught myself SketchUp/CAD to get it all done. I'll
-        find a way. */}
         I once helped plan dinner for 1,000 people on a NYC pier using one
         continuous table. Everything—including fire safety—was riding on a
         precise layout (my job). The artist only worked in crude ballpoint pen

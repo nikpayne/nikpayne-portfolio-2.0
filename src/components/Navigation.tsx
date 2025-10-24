@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { useColorMode } from "../contexts/ColorModeContext";
-import { useState, useEffect, useRef } from "react";
 
 export default function Navigation() {
   const location = useLocation();
@@ -26,7 +25,7 @@ export default function Navigation() {
     <Box as="nav">
       <Container maxW="container.xl">
         <Flex h={16} align="center" justify="space-between">
-          <Heading size="lg" color="blue.500">
+          <Heading size="lg">
             <RouterLink to="/" style={{ textDecoration: "none" }}>
               Nik Payne
             </RouterLink>
@@ -44,9 +43,12 @@ export default function Navigation() {
                     px={3}
                     py={2}
                     borderRadius="md"
-                    fontWeight={isActive(item.path) ? "bold" : "normal"}
-                    color={isActive(item.path) ? "blue.500" : undefined}
-                    bg={isActive(item.path) ? "blue.50" : undefined}
+                    fontWeight={isActive(item.path) ? "semibold" : "medium"}
+                    color={
+                      isActive(item.path)
+                        ? undefined
+                        : { base: "gray.600", _dark: "gray.400" }
+                    }
                     _hover={{
                       bg: { base: "gray.100", _dark: "gray.700" },
                     }}
@@ -66,7 +68,7 @@ export default function Navigation() {
               {colorMode === "light" ? "☀️" : "🌙"}
             </IconButton>
 
-            <Button>Do not click this button</Button>
+            {/* <Button>Do not click this button</Button> */}
           </HStack>
         </Flex>
       </Container>

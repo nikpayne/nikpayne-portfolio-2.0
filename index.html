@@ -80,17 +80,22 @@
           var ratingCountInlineElement = document.getElementById(
             "rating-count-inline"
           );
+          var lastUpdatedInlineElement = document.getElementById(
+            "last-updated-inline"
+          );
 
           if (
             avgRatingElement &&
             lastUpdatedElement &&
             avgRatingInlineElement &&
-            ratingCountInlineElement
+            ratingCountInlineElement &&
+            lastUpdatedInlineElement
           ) {
             avgRatingElement.innerHTML = avgRating.toFixed(1);
             lastUpdatedElement.innerHTML = displayDate;
             avgRatingInlineElement.innerHTML = avgRating.toFixed(1);
             ratingCountInlineElement.innerHTML = ratingCount;
+            lastUpdatedInlineElement.innerHTML = displayDate;
           } else {
             // Elements not ready yet, try again in 100ms
             setTimeout(tryUpdate, 100);
