@@ -16,8 +16,8 @@ export const values: Value[] = [
         I start every morning in our support forums. "Give the people what they
         want" started as my strategy pitch and became a running joke at
         work—mostly because I won't shut up about customer feedback in Slack.
-        IMO solving problems people bring you is 10X simpler and more effective
-        than cooking up strategy decks.
+        IMO grounding your roadmap in real customer problems (they bring you) is
+        10X simpler and more effective than cooking up strategy decks.
       </Text>
     ),
   },
@@ -29,8 +29,8 @@ export const values: Value[] = [
         I'm the opposite of a specialist; my value is as a connector. I've been
         a PM, engineer, and designer—partly out of selfish curiosity, but also
         because I belive it helps me collaborate more effectively across
-        disciplines, and think about product more holistically. At Gamma I sit
-        in both PM and design meetings, and push code when needed.
+        disciplines, and build better product. At Gamma I sit in both PM and
+        design meetings, and push code when needed.
       </Text>
     ),
   },
@@ -39,10 +39,11 @@ export const values: Value[] = [
     title: "I like building in public",
     description: (
       <Text>
-        Product is hard if you try to play the chess game in your head. I tend
-        to ship the obvious pieces of a design first, then wait for data and
-        user feedback to clarify and validate next steps. If you let people pull
-        product out of you, you'll rarely ship anything unnecessary.
+        I work iteratively. I typically design a few chess moves ahead (enough
+        to set a vision and avoid traps), then ship the obvious pieces of the
+        design first. From there, data and user feedback will dictate next
+        steps. If you let people pull product out of you, you'll rarely ship
+        anything unnecessary.
       </Text>
     ),
   },

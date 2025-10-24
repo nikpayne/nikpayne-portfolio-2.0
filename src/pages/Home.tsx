@@ -10,7 +10,7 @@ import {
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
-import { projects } from "../projects/constants";
+import { projects } from "../content/projects";
 import ProjectCard from "../components/ProjectCard";
 import Footer from "../components/Footer";
 import TypingText from "../components/TypingText";

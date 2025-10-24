@@ -10,7 +10,7 @@ import {
   Link,
   Button,
 } from "@chakra-ui/react";
-import { values } from "../about/constants";
+import { values } from "../content/about";
 import Footer from "../components/Footer";
 import aboutImg from "../assets/about/about-photo.jpg";
 
@@ -26,7 +26,7 @@ export default function About() {
 
           {/* Placeholder for image */}
           <Image src={aboutImg} alt="About Me" />
-
+          {/* 
           <Heading size="lg" mb={4}>
             Hi. My Name's Nik
           </Heading>
@@ -67,7 +67,7 @@ export default function About() {
               recently mountain biking. I also go to a lot of metal/hardcore
               shows, and I'm low key an expert on UFOs.
             </Text>
-          </Stack>
+          </Stack> */}
         </Stack>
       </Container>
 
@@ -109,28 +109,25 @@ export default function About() {
       <Box py={32}>
         <Container maxW="5xl">
           <Stack gap={6} align="center" textAlign="center">
-            <Heading size="5xl">☕ Mentorship</Heading>
+            <Heading size="5xl">Mentorship</Heading>
             <Text fontSize="xl" lineHeight="tall" maxW="2xl">
               If you need help breaking into design or just want to chat, hit me
               up. I can't promise I have all the answers but I am a two-time
-              AIGA mentor and I'm happy to share what I know. Shoot me an email
-              at{" "}
-              <Link
-                href="mailto:nikolasapayne@gmail.com"
-                rel="noreferrer"
-                textDecoration="underline"
-              >
-                nikolasapayne@gmail.com
-              </Link>{" "}
-              or message me on Linkedin
+              AIGA mentor and I'm happy to share what I know after—sheesh—almost
+              10 years of doing this.
             </Text>
-            <Link
-              href="https://linkedin.com/in/nikpayne"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Button size="lg">Connect on Linkedin</Button>
-            </Link>
+            <HStack>
+              <Link href="mailto:nikolasapayne@gmail.com">
+                <Button size="lg">Email me</Button>
+              </Link>
+              <Link
+                href="https://linkedin.com/in/nikpayne"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button size="lg">Linkedin me</Button>
+              </Link>
+            </HStack>
           </Stack>
         </Container>
       </Box>

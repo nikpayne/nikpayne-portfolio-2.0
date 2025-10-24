@@ -9,7 +9,7 @@ import {
   Badge,
   Image,
 } from "@chakra-ui/react";
-import type { Project } from "../projects/constants";
+import type { Project } from "../content/projects";
 
 interface ProjectCardProps {
   project: Project;
@@ -17,17 +17,8 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card.Root
-      key={project.id}
-      variant="outline"
-      minH="80vh"
-      border="none"
-      bg="none"
-    >
-      <Card.Body
-        // p={6}
-        p={0}
-      >
+    <Card.Root key={project.id} variant="outline" border="none" bg="none">
+      <Card.Body minH="90vh" p={0}>
         <Stack gap={8}>
           <HStack gap={8} align="flex-start">
             <Flex flex="1">

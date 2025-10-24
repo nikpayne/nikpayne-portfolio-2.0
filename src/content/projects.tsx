@@ -1,6 +1,7 @@
 import {
   Text,
   Image,
+  HStack,
   Link,
   Stack,
   Button,
@@ -8,6 +9,7 @@ import {
   AccordionItemTrigger,
   AccordionItemContent,
   AccordionRoot,
+  chakra,
 } from "@chakra-ui/react";
 import androidAutoImg from "../assets/projects/android-auto.jpg";
 import touchlessParkingImg from "../assets/projects/touchless-parking.jpg";
@@ -20,12 +22,12 @@ import campingChecklistPdf from "../assets/pdfs/Camping-Checklist-Pro-2025.pdf";
 import spotheroWebPdf from "../assets/pdfs/Spothero-Web-Renovation-2025.pdf";
 
 export interface KeyResult {
-  value: string;
-  label: string;
+  value: React.ReactNode;
+  label: React.ReactNode;
 }
 
 export interface GammaProject {
-  title: string;
+  title: React.ReactNode;
   content: React.ReactNode;
 }
 
@@ -65,11 +67,17 @@ export const projects: Project[] = [
     imageUrl: gammaImg,
     imageAlt:
       "Gamma presentation platform interface showing doc-to-deck conversion",
-    technologies: ["", "TypeScript", "Node.js", "AI/ML"],
+    technologies: [
+      "Product design",
+      "Research",
+      "Product management",
+      "Strategy",
+      "AI",
+    ],
     keyResults: [
-      { value: "12th", label: "employee" },
-      { value: "$1B", label: "Valuation" },
-      { value: "0→$100M", label: "ARR (from pre-PMF)" },
+      { value: "12th", label: "Employee (designer #3, jokingly PM #0)" },
+      { value: "$50M", label: "ARR (from $0, pre-PMF)" },
+      { value: "50M", label: "Users" },
     ],
     description: (
       <>
@@ -110,11 +118,18 @@ export const projects: Project[] = [
     imageUrl: campingChecklistImgV2,
     imageAlt:
       "Camping Checklist Pro mobile app interface showing outdoor gear organization",
-    technologies: ["iOS", "Swift UI", "Realm DB", "ASO"],
+    technologies: ["Design", "Development", "iOS", "Swift UI", "Realm DB"],
     keyResults: [
       { value: "200+", label: "Hours of tutorials, design and development" },
-      { value: "10,000+", label: "Downloads" },
-      { value: "4.9", label: "App store rating" },
+      { value: "10,000+", label: "Downloads in the App Store" },
+      {
+        value: <span id="app-store-rating">XX</span>,
+        label: (
+          <>
+            App store rating, as of <span id="last-updated">recently</span>
+          </>
+        ),
+      },
     ],
     description: (
       <Stack gap={4} align="start">
@@ -129,14 +144,25 @@ export const projects: Project[] = [
           app. "Camping Checklist - Pro" has had been downloaded by folks all
           over the world. Primarily the US, Canada, UK, Australia and Germany.
         </Text>
-        <Link
-          href="https://apps.apple.com/us/app/camping-checklist-pro/id1564492728"
-          target="_blank"
-          rel="noreferrer"
-          mt={2}
-        >
-          <Image src={appStore} alt="App Store" />
-        </Link>
+        <HStack mt="2" gap={3} alignItems="center" flexWrap="wrap">
+          <Link
+            href="https://apps.apple.com/us/app/camping-checklist-pro/id1564492728"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image src={appStore} alt="App Store" h="11" />
+          </Link>
+          <Stack gap={-2}>
+            <Text>
+              <chakra.span style={{ color: "#ffa41c" }}>★★★★★</chakra.span>{" "}
+              <chakra.span id="app-store-rating-inline">XX</chakra.span> (
+              <chakra.span id="rating-count-inline">XX</chakra.span>)
+            </Text>
+            <Text fontSize="sm">
+              Updated <span id="last-updated">recently</span>
+            </Text>
+          </Stack>
+        </HStack>
       </Stack>
     ),
     cta: (
@@ -152,7 +178,12 @@ export const projects: Project[] = [
     imageUrl: spotheroWebImg,
     imageAlt:
       "SpotHero website redesign showing before and after interface improvements",
-    technologies: ["React", "Web Design", "UX Research", "A/B Testing"],
+    technologies: [
+      "Conversion rate optimization",
+      "UX research",
+      "Experimentation",
+      "A/B testing",
+    ],
     keyResults: [
       { value: "25%", label: "Increase in conversion" },
       { value: "67%", label: "YOY growth in mobile traffic" },
@@ -185,14 +216,13 @@ export const projects: Project[] = [
     imageUrl: androidAutoImg,
     imageAlt:
       "SpotHero Android Auto interface showing parking reservation in connected car",
-    technologies: ["Android", "Android Auto", "Connected car", "0 → 1"],
+    technologies: ["Android", "Android Auto", "Connected car", "Innovation"],
     keyResults: [
       {
         value: "1st",
-        label: "[to my knowledge] off-street parking app for connected car",
+        label: "Off-street parking app for connected car (to my knowledge)",
       },
       { value: "1,000+", label: "Beta signups" },
-      { value: " ", label: " " },
     ],
     description: (
       <Stack gap={4} align="start">

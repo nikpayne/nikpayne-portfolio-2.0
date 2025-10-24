@@ -53,5 +53,54 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- App Store Rating Fetcher -->
+    <script>
+      function updateStarRatings(json) {
+        var results = json.results[0];
+        var avgRating = results.averageUserRating;
+        var ratingCount = results.userRatingCount;
+
+        // Format date as "Oct 24, 2025"
+        let todayComponents = new Date().toString().split(" ");
+        let displayDate =
+          todayComponents[1] +
+          " " +
+          todayComponents[2] +
+          ", " +
+          todayComponents[3];
+
+        // Function to update the DOM elements
+        function tryUpdate() {
+          var avgRatingElement = document.getElementById("app-store-rating");
+          var lastUpdatedElement = document.getElementById("last-updated");
+          var avgRatingInlineElement = document.getElementById(
+            "app-store-rating-inline"
+          );
+          var ratingCountInlineElement = document.getElementById(
+            "rating-count-inline"
+          );
+
+          if (
+            avgRatingElement &&
+            lastUpdatedElement &&
+            avgRatingInlineElement &&
+            ratingCountInlineElement
+          ) {
+            avgRatingElement.innerHTML = avgRating.toFixed(1);
+            lastUpdatedElement.innerHTML = displayDate;
+            avgRatingInlineElement.innerHTML = avgRating.toFixed(1);
+            ratingCountInlineElement.innerHTML = ratingCount;
+          } else {
+            // Elements not ready yet, try again in 100ms
+            setTimeout(tryUpdate, 100);
+          }
+        }
+
+        // Start trying to update
+        tryUpdate();
+      }
+    </script>
+    <script src="https://itunes.apple.com/lookup?id=1564492728&callback=updateStarRatings"></script>
   </body>
 </html>
