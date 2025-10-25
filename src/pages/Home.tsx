@@ -33,8 +33,8 @@ export default function Home() {
                     <chakra.span as="h1" display="inline">
                       Nik Payne
                     </chakra.span>{" "}
-                    is a product designer and customer-obsessed product person
-                    at{" "}
+                    is a product designer and customer-obsessed product person.
+                    Currently at{" "}
                     <Link
                       href="https://gamma.app"
                       target="_blank"

@@ -18,24 +18,34 @@ export default function Footer() {
   return (
     <Box as="footer" py={8}>
       <Container maxW="container.xl">
-        <HStack justify="space-between" align="center">
+        <Stack
+          flexDirection={{ base: "column", md: "row" }}
+          justify="space-between"
+          align="center"
+        >
           <Text fontSize="lg">© Nik Payne, {currentYear}</Text>
 
           <HStack gap={6}>
-            <Link
-              href="https://www.instagram.com/vivasantacruz"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Text fontSize="lg">Instagram</Text>
-            </Link>
-            <Link
-              href="https://linkedin.com/in/nikpayne"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Text fontSize="lg">Linkedin</Text>
-            </Link>
+            <Text fontSize="lg">
+              <Link
+                href="https://www.instagram.com/vivasantacruz"
+                target="_blank"
+                rel="noreferrer"
+                textDecoration="underline"
+              >
+                Instagram
+              </Link>
+            </Text>
+            <Text fontSize="lg">
+              <Link
+                href="https://linkedin.com/in/nikpayne"
+                target="_blank"
+                rel="noreferrer"
+                textDecoration="underline"
+              >
+                Linkedin
+              </Link>
+            </Text>
 
             <Popover.Root positioning={{ placement: "top" }}>
               <Popover.Trigger asChild>
@@ -68,7 +78,7 @@ export default function Footer() {
               </Popover.Positioner>
             </Popover.Root>
           </HStack>
-        </HStack>
+        </Stack>
       </Container>
     </Box>
   );
