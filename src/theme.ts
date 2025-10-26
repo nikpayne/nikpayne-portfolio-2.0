@@ -17,6 +17,25 @@ export const system = createSystem(defaultConfig, {
           fontWeight: "500",
         },
       },
+      badge: {
+        base: {
+          // fontWeight: "600",
+          // textTransform: "none",
+          // borderRadius: "md",
+        },
+        variants: {
+          variant: {
+            // subtle: {
+            //   bg: { _light: "blue.100", _dark: "blue.900" },
+            //   color: { _light: "blue.800", _dark: "blue.200" },
+            // },
+            subtle: {
+              bg: { _light: "gray.200", _dark: "gray.700" },
+              // color: { _light: "gray.200", _dark: "white" },
+            },
+          },
+        },
+      },
     },
     semanticTokens: {
       colors: {

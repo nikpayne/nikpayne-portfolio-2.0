@@ -11,6 +11,8 @@ import {
   AccordionRoot,
   chakra,
 } from "@chakra-ui/react";
+import AppStoreRating from "../components/AppStoreRating";
+import AppStoreUpdatedDate from "../components/AppStoreUpdatedDate";
 import androidAutoImg from "../assets/projects/android-auto.jpg";
 import touchlessParkingImg from "../assets/projects/touchless-parking.jpg";
 import spotheroWebImg from "../assets/projects/spothero-web.jpg";
@@ -134,10 +136,16 @@ export const projects: Project[] = [
       { value: "200+", label: "Hours of tutorials, design and development" },
       { value: "10,000+", label: "Downloads in the App Store" },
       {
-        value: <span id="app-store-rating">XX</span>,
+        value: (
+          <AppStoreRating
+            id="1564492728"
+            showCount={false}
+            showUpdated={false}
+          />
+        ),
         label: (
           <>
-            App store rating, as of <span id="last-updated">recently</span>
+            App store rating, as of <AppStoreUpdatedDate id="1564492728" />
           </>
         ),
       },
@@ -167,11 +175,14 @@ export const projects: Project[] = [
           <Stack gap={-2}>
             <Text>
               <chakra.span style={{ color: "#ffa41c" }}>★★★★★</chakra.span>{" "}
-              <chakra.span id="app-store-rating-inline">XX</chakra.span> (
-              <chakra.span id="rating-count-inline">XX</chakra.span>)
+              <AppStoreRating
+                id="1564492728"
+                showCount={true}
+                showUpdated={false}
+              />
             </Text>
             <Text fontSize="sm">
-              Updated <span id="last-updated-inline">recently</span>
+              Updated <AppStoreUpdatedDate id="1564492728" />
             </Text>
           </Stack>
         </HStack>
