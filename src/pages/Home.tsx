@@ -26,11 +26,8 @@ export default function Home() {
                 </Heading>
                 <Stack flexDirection={{ base: "column", md: "row" }}>
                   <Text fontSize="2xl" flex="3">
-                    <chakra.span as="h1" display="inline">
-                      Nik Payne
-                    </chakra.span>{" "}
-                    is a product designer and customer-obsessed product person.
-                    Currently at{" "}
+                    Nik Payne is a product designer and customer-obsessed
+                    product person. Currently at{" "}
                     <Link
                       href="https://gamma.app"
                       target="_blank"

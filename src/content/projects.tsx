@@ -1,14 +1,11 @@
 import {
-  AccordionItem,
-  AccordionItemContent,
-  AccordionItemTrigger,
-  AccordionRoot,
   Button,
   chakra,
   HStack,
   Image,
   Link,
   Stack,
+  Table,
   Text,
 } from "@chakra-ui/react";
 import appStore from "../assets/app-store.svg";
@@ -28,8 +25,9 @@ export interface KeyResult {
 }
 
 export interface GammaProject {
-  title: React.ReactNode;
-  content: React.ReactNode;
+  title: string;
+  challenge?: string;
+  description: string;
 }
 
 export interface Project {
@@ -47,16 +45,64 @@ export interface Project {
 
 export const gammaProjects: GammaProject[] = [
   {
-    title: "Project 1",
-    content: <Text>Description of project 1 at Gamma.</Text>,
+    title: "AI generator 2.0",
+    description:
+      "Unified our prompt and text-based AI generation into a single interface optimized for simplicity and discoverability. Added card-by-card mode for more control and iteration",
   },
   {
-    title: "Project 2",
-    content: <Text>Description of project 2 at Gamma.</Text>,
+    title: "Persisted drafts & doc history",
+    description:
+      "First implementation of version control and draft saving—foundational for enterprise workflows",
   },
   {
-    title: "Project 3",
-    content: <Text>Description of project 3 at Gamma.</Text>,
+    title: "Card count upsell",
+    description:
+      "#1 individual feature for monetization—strategically placed upgrade prompts at high-intent moments",
+  },
+  {
+    title: "Engagement analytics",
+    description:
+      "Designed an engagement analytics dashboard to help users understand engagement with their content. Aided in pro plan upsells.",
+  },
+  {
+    title: "Account & workspace settings V1",
+    description:
+      "Designed core settings infrastructure: user roles, invitations, account deletion, and workspace management",
+  },
+  {
+    title: "Custom themes editor",
+    description:
+      "Built theme customization system with live preview, visual settings, and theme import",
+    challenge:
+      "Providing visibility into system status while decomposing base styles",
+  },
+  {
+    title: "Review screen & page setup",
+    description:
+      "Designed portable page setup allowing content to fluidly move between presentation, document, and web formats",
+  },
+  {
+    title: "Card headers and footers",
+    description:
+      "Added persistent page elements for logos, page numbers, and branding across presentations",
+    challenge: "Data modeling for inheritance and per-page overrides",
+  },
+  {
+    title: "Custom font upload",
+    description:
+      "Built font management system allowing teams to upload and manage brand fonts",
+    challenge:
+      "Designed scalable data model (FontFamily + FontFiles + Weights) that allows editing after upload",
+  },
+  {
+    title: "Custom workspace templates",
+    description:
+      "Created template system to streamline team workflows and enforce brand consistency",
+  },
+  {
+    title: "Card styling menu",
+    description:
+      "Centralized all visual design controls for individual cards into a unified interface",
   },
 ];
 
@@ -104,22 +150,35 @@ export const projects: Project[] = [
         <Button>Try Gamma</Button>
       </Link>
     ),
-    extraContent: (
-      <AccordionRoot collapsible>
-        {gammaProjects.map((project, index) => (
-          <AccordionItem key={index} value={`gamma-${index}`}>
-            <AccordionItemTrigger
-              cursor="pointer"
-              pb={4}
-              justifyContent="space-between"
-            >
-              {project.title}
-            </AccordionItemTrigger>
-            <AccordionItemContent>{project.content}</AccordionItemContent>
-          </AccordionItem>
-        ))}
-      </AccordionRoot>
-    ),
+    // extraContent: (
+    //   <Table.Root size="sm" variant="line" mt={6} bg="none">
+    //     <Table.Header>
+    //       <Table.Row bg="none">
+    //         <Table.ColumnHeader width="30%">Project</Table.ColumnHeader>
+    //         <Table.ColumnHeader>Description</Table.ColumnHeader>
+    //       </Table.Row>
+    //     </Table.Header>
+    //     <Table.Body>
+    //       {gammaProjects.map((project, index) => (
+    //         <Table.Row key={index} bg="none">
+    //           <Table.Cell fontWeight="semibold" bg="none">
+    //             {project.title}
+    //           </Table.Cell>
+    //           <Table.Cell bg="none">
+    //             <Stack gap={1}>
+    //               <Text>{project.description}</Text>
+    //               {project.challenge && (
+    //                 <Text fontSize="sm" color="text.secondary">
+    //                   Challenge: {project.challenge}
+    //                 </Text>
+    //               )}
+    //             </Stack>
+    //           </Table.Cell>
+    //         </Table.Row>
+    //       ))}
+    //     </Table.Body>
+    //   </Table.Root>
+    // ),
   },
   {
     id: "camping-checklist-pro",

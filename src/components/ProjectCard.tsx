@@ -71,9 +71,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </Flex>
           </Stack>
 
-          {/* {project.extraContent && (
-            <Box width="100%">{project.extraContent}</Box>
-          )} */}
+          {project.extraContent && (
+            <Box width="100%" mt={6}>
+              {project.extraContent}
+            </Box>
+          )}
         </Stack>
       </Card.Body>
     </Card.Root>
