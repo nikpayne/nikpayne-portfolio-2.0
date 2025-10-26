@@ -1,15 +1,14 @@
 import {
   Box,
-  Button,
   Container,
   Flex,
   Heading,
   HStack,
   IconButton,
 } from "@chakra-ui/react";
+import { Moon, Sun } from "lucide-react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { useColorMode } from "../contexts/ColorModeContext";
-import { Sun, Moon } from "lucide-react";
 
 export default function Navigation() {
   const location = useLocation();

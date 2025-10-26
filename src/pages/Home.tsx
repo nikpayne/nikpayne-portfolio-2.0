@@ -1,20 +1,16 @@
 import {
-  Heading,
-  HStack,
-  Text,
-  Button,
-  Stack,
-  Container,
   Box,
-  Link,
   chakra,
+  Container,
+  Heading,
+  Link,
   Separator,
+  Stack,
+  Text,
 } from "@chakra-ui/react";
-import { projects } from "../content/projects";
-import ProjectCard from "../components/ProjectCard";
 import Footer from "../components/Footer";
-import TypingText from "../components/TypingText";
-import { ChevronDown } from "lucide-react";
+import ProjectCard from "../components/ProjectCard";
+import { projects } from "../content/projects";
 
 export default function Home() {
   return (

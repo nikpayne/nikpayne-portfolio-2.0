@@ -1,29 +1,26 @@
 import {
-  Text,
-  Image,
+  AccordionItem,
+  AccordionItemContent,
+  AccordionItemTrigger,
+  AccordionRoot,
+  Button,
+  chakra,
   HStack,
+  Image,
   Link,
   Stack,
-  Button,
-  AccordionItem,
-  AccordionItemTrigger,
-  AccordionItemContent,
-  AccordionRoot,
-  chakra,
+  Text,
 } from "@chakra-ui/react";
+import appStore from "../assets/app-store.svg";
+import campingChecklistPdf from "../assets/pdfs/Camping-Checklist-Pro-2025.pdf";
+import androidAutoUpdatedImg from "../assets/projects/android-auto-upscaled.png";
+import campingChecklistImgV3 from "../assets/projects/camping-checklist-v3.png";
+import gammaImg from "../assets/projects/gamma.png";
+import lyft95ImgV2 from "../assets/projects/lyft-95-borderless.png";
+import spotheroWebImg from "../assets/projects/spothero-web.jpg";
+import touchlessParkingImg from "../assets/projects/touchless-parking.jpg";
 import AppStoreRating from "../components/AppStoreRating";
 import AppStoreUpdatedDate from "../components/AppStoreUpdatedDate";
-import androidAutoImg from "../assets/projects/android-auto.jpg";
-import touchlessParkingImg from "../assets/projects/touchless-parking.jpg";
-import spotheroWebImg from "../assets/projects/spothero-web.jpg";
-import lyft95Img from "../assets/projects/lyft-95.png";
-import lyft95ImgV2 from "../assets/projects/lyft-95-borderless.png";
-import gammaImg from "../assets/projects/gamma.png";
-import appStore from "../assets/app-store.svg";
-import campingChecklistImgV2 from "../assets/projects/camping-checklist-v1.png";
-import campingChecklistPdf from "../assets/pdfs/Camping-Checklist-Pro-2025.pdf";
-import campingChecklistImgV3 from "../assets/projects/camping-checklist-v3.png";
-import androidAutoUpdatedImg from "../assets/projects/android-auto-upscaled.png";
 
 export interface KeyResult {
   value: React.ReactNode;
