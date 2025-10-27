@@ -5,6 +5,7 @@ import {
   useState,
   ReactNode,
 } from "react";
+import { useToken } from "@chakra-ui/react";
 
 type ColorMode = "light" | "dark";
 
@@ -30,6 +31,9 @@ export function ColorModeProvider({ children }: { children: ReactNode }) {
     return "light";
   });
 
+  // Resolve to the same colors used in App.tsx
+  const [lightBg, darkBg] = useToken("colors", ["gray.50", "gray.900"]);
+
   useEffect(() => {
     // Update document class and localStorage when colorMode changes
     const root = document.documentElement;
@@ -39,7 +43,7 @@ export function ColorModeProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("chakra-ui-color-mode", colorMode);
 
     // Update theme-color meta tag for iOS
-    const themeColor = colorMode === "dark" ? "#1a202c" : "#ffffff";
+    const themeColor = colorMode === "dark" ? darkBg : lightBg;
     let themeColorMeta = document.querySelector('meta[name="theme-color"]');
 
     if (themeColorMeta) {
@@ -54,7 +58,7 @@ export function ColorModeProvider({ children }: { children: ReactNode }) {
 
     // Update body background color
     document.body.style.backgroundColor = themeColor;
-  }, [colorMode]);
+  }, [colorMode, lightBg, darkBg]);
 
   const toggleColorMode = () => {
     setColorMode((prev) => (prev === "light" ? "dark" : "light"));
