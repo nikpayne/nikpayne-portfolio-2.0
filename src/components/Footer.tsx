@@ -51,22 +51,19 @@ export default function Footer() {
               </IconButton>
             </Popover.Trigger>
             <Popover.Positioner>
-              <Popover.Content>
+              <Popover.Content maxW="200px">
                 <Popover.Arrow />
                 <Popover.Body>
                   <Stack gap={1} fontSize="xs">
-                    <Text fontWeight="bold" mb={1}>
-                      Vibe and hand-coded with love using:
-                    </Text>
                     <List.Root pl={3}>
                       <List.Item>
                         <Text>Chakra UI V3</Text>
                       </List.Item>
                       <List.Item>
-                        <Text>Vite + React Router</Text>
+                        <Text>Vite + React router</Text>
                       </List.Item>
                       <List.Item>
-                        <Text>Vercel</Text>
+                        <Text>Deployed on Vercel</Text>
                       </List.Item>
                     </List.Root>
                   </Stack>
