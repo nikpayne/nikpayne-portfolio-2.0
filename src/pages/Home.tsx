@@ -21,7 +21,13 @@ export default function Home() {
         <Container maxW="6xl">
           <Stack gap={6} align="start">
             <Stack flex="1" gap={4} align="start">
-              <Heading size="6xl">
+              <Heading
+                size="6xl"
+                // textShadow="
+                //   -1px 0 0 red,
+                //   1px 0 0 blue,
+                //   0 0 2px cyan"
+              >
                 Product designer, product manager, engineer—whatever it takes
               </Heading>
               <Stack flexDirection={{ base: "column", md: "row" }}>
