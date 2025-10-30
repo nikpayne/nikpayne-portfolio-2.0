@@ -6,6 +6,7 @@ import {
   ReactNode,
 } from "react";
 import { useToken } from "@chakra-ui/react";
+import { LIGHT_BG, DARK_BG } from "../App";
 
 type ColorMode = "light" | "dark";
 
@@ -32,7 +33,7 @@ export function ColorModeProvider({ children }: { children: ReactNode }) {
   });
 
   // Resolve to the same colors used in App.tsx
-  const [lightBg, darkBg] = useToken("colors", ["gray.50", "gray.900"]);
+  const [lightBg, darkBg] = useToken("colors", [LIGHT_BG, DARK_BG]);
 
   useEffect(() => {
     // Update document class and localStorage when colorMode changes
