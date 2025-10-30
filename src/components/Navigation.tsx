@@ -23,7 +23,7 @@ export default function Navigation() {
 
   return (
     <Box as="nav">
-      <Container maxW="container.xl">
+      <Container maxW="8xl">
         <Flex h={16} align="center" justify="space-between">
           <Heading size="lg">
             <RouterLink to="/" style={{ textDecoration: "none" }}>

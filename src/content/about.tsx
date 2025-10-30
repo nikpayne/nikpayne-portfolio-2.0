@@ -16,9 +16,8 @@ export const values: Value[] = [
         I start every morning in our support forums. "Give the people what they
         want" started as my strategy pitch and became a running joke at
         work—mostly because I won't shut up about customer feedback in Slack.
-        Feedback is gold, and IMO grounding your roadmap in real customer
-        problems is 10X simpler and more effective than cooking up strategy
-        decks.
+        IMO grounding your roadmap in real customer problems is 10X simpler and
+        more effective than cooking up strategy decks.
       </Text>
     ),
   },
@@ -56,8 +55,8 @@ export const values: Value[] = [
         design involves boiling away ("less, but better"). I tend to approach
         product like an optimization problem: how do we achieve maximum customer
         value with the simplest and most elegant interfaces, code, and business
-        logic. You can almost always layer on complexity as needed, but working
-        in reverse is usually much harder.
+        logic. You can almost always layer on complexity as needed. Working in
+        reverse is harder.
       </Text>
     ),
   },
