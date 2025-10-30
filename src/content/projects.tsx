@@ -349,8 +349,7 @@ export const projects: Project[] = [
       },
       {
         value: "5-team",
-        label:
-          "Design leadership exercise (coordinating iOS, Android, Web, Marketing & PR)",
+        label: "Design leadership (iOS, Android, Web, Marketing & PR)",
       },
 
       {

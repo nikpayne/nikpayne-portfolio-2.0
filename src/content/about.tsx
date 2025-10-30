@@ -40,11 +40,10 @@ export const values: Value[] = [
     title: "I like building in public",
     description: (
       <Text>
-        I work iteratively. I typically design a few chess moves ahead (enough
-        to set a vision and avoid traps), then ship the obvious pieces of the
-        design first. From there, I usually let data and user feedback dictate
-        next steps. If you let people pull product out of you, you'll rarely
-        ship anything unnecessary.
+        I work iteratively. I like to design enough to set a vision and avoid
+        obvious traps, then ship the clearest pieces first. Data and user
+        feedback dictate next steps. Starting small maximizes optionality and
+        lets people pull the right product out of you.
       </Text>
     ),
   },
