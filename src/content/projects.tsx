@@ -122,8 +122,8 @@ export const projects: Project[] = [
       "AI",
     ],
     keyResults: [
-      { value: "12th", label: "Employee (designer #3, jokingly PM #0)" },
-      { value: "$50M", label: "ARR (from $0, pre-PMF)" },
+      { value: "12th", label: "Employee" },
+      { value: "$50M", label: "ARR" },
       { value: "50M", label: "Users" },
     ],
     description: (
