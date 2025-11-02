@@ -11,7 +11,12 @@ export default function ProjectKeyResults({ keyResults }: Props) {
     <HStack gap={6} align="flex-start">
       {keyResults.map((result, index) => (
         <Stack key={index} gap={1.5} flex="1">
-          <Heading fontSize="3xl" fontWeight="bold" lineHeight="1">
+          <Heading
+            fontSize="3xl"
+            fontWeight="bold"
+            lineHeight="1"
+            fontFamily="'PP Neue Montreal Mono', monospace"
+          >
             {result.value}
           </Heading>
           <Text fontSize="sm" color="text.secondary" lineHeight="1.3">

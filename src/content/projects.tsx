@@ -122,21 +122,24 @@ export const projects: Project[] = [
       "AI",
     ],
     keyResults: [
-      { value: "12th", label: "Employee" },
+      { value: "11th", label: "Employee" },
       { value: "$50M", label: "ARR" },
       { value: "50M", label: "Users" },
     ],
     description: (
       <Stack gap={4}>
         <Text>
-          I currently work at Gamma. Being early means I've gotten to work on an
-          ungodly amount of the product—AI, core product, onboarding,
-          monetization, B2B—across multiple disciplines: research, design,
-          product strategy, and even eng work. I've built the role I want.
+          I currently work at Gamma. Being early means I've gotten to work on a
+          ton of the product—designing and shipping 0→1 features across AI, core
+          product, onboarding, monetization, and B2B. I've also worn multiple
+          hats: research, design, product strategy, and light eng work. I've
+          built the role I want.
         </Text>
         <Text>
-          I've also surely made some mistakes that may haunt future teams as we
-          scale 😅. The future is yet to reveal itself.
+          The exciting and scary part has been making architectural decisions
+          that will shape the product for years. UIs are malleable and easy to
+          fix. Data models are harder, but there are migration paths. Customer
+          content though (decks, prompts, permissions) is damn near forever.
         </Text>
         <Text>
           Gamma lets you write content like a document and present it like a
@@ -298,8 +301,9 @@ export const projects: Project[] = [
     technologies: ["Android", "Android Auto", "Connected car", "Innovation"],
     keyResults: [
       {
-        value: "World's 1st",
-        label: "Off-street parking app for connected car (to my knowledge)",
+        value: "1st",
+        label:
+          "Off-street parking app for connected car in the world (to my knowledge)",
       },
       { value: "1,000+", label: "Beta signups" },
     ],

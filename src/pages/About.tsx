@@ -23,7 +23,8 @@ export default function About() {
             <Image
               src={aboutImg}
               alt="About Me"
-              borderRadius="full"
+              borderTopRadius="full"
+              borderBottomRadius="l3"
               boxSize={{ base: "150px", md: "2xs" }}
               objectFit="cover"
             />
@@ -66,7 +67,11 @@ export default function About() {
               10 years of doing this.
             </Text>
             <HStack>
-              <Link href="mailto:nikolasapayne@gmail.com">
+              <Link
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=nikolasapayne@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Button size="lg">Email me</Button>
               </Link>
               <Link

@@ -34,27 +34,39 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             flexDirection={{ base: "column-reverse", lg: "row" }}
           >
             <Flex flex="1">
-              <Stack gap={6}>
-                <Stack gap="3">
-                  <Text fontSize="md" color="text.secondary">
+              <Stack gap={5}>
+                <Stack gap="2">
+                  <Text
+                    fontSize="lg"
+                    color="text.secondary"
+                    fontFamily="PP Neue Montreal Mono"
+                  >
                     {project.duration}
                   </Text>
                   <Heading size="4xl" pb="1">
                     {project.title}
                   </Heading>
 
-                  <HStack wrap="wrap" gap={1}>
+                  {/* <HStack wrap="wrap" gap={1} pt={1}>
                     {project.technologies.map((tech) => (
                       <Badge key={tech} variant="subtle" size="sm">
                         {tech}
                       </Badge>
                     ))}
-                  </HStack>
+                  </HStack> */}
                 </Stack>
 
                 <Box fontSize="lg" lineHeight="tall">
                   {project.description}
                 </Box>
+
+                <HStack wrap="wrap" gap={1.5} pb={1}>
+                  {project.technologies.map((tech) => (
+                    <Badge key={tech} variant="subtle" size="md">
+                      {tech}
+                    </Badge>
+                  ))}
+                </HStack>
 
                 <ProjectKeyResults keyResults={project.keyResults} />
 
