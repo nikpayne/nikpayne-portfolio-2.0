@@ -8,6 +8,7 @@ import {
   Popover,
   Stack,
   Text,
+  chakra,
 } from "@chakra-ui/react";
 import { Code as CodeIcon } from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
@@ -22,14 +23,12 @@ export default function Footer() {
         justify="space-between"
         align="center"
       >
-        <HStack gap={6}>
-          <Text fontSize="lg">© Nik Payne, {currentYear}</Text>
-          <Text fontSize="lg">
-            <Link asChild textDecoration="underline">
-              <RouterLink to="/piracy">Piracy policy</RouterLink>
-            </Link>
-          </Text>
-        </HStack>
+        <Text fontSize="lg" color="text.secondary">
+          © Nik Payne, {currentYear} <chakra.span mx="1.5">ᐧ</chakra.span>{" "}
+          <Link asChild color="text.secondary">
+            <RouterLink to="/piracy">Piracy policy</RouterLink>
+          </Link>
+        </Text>
 
         <HStack gap={6}>
           <Text fontSize="lg">

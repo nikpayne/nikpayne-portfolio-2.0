@@ -16,6 +16,8 @@ import Footer from "../components/Footer";
 import aboutImg from "../assets/about/about-photo-cropped.jpg";
 
 export default function About() {
+  const MOBILE_HEADING_SIZE = "4xl";
+  const DESKTOP_HEADING_SIZE = "5xl";
   return (
     <Box position="relative">
       <Box py={{ base: 16, md: 32 }}>
@@ -30,8 +32,10 @@ export default function About() {
               objectFit="cover"
             />
 
-            <Heading size="5xl" mb={{ base: undefined, md: 10 }}>
-              How I build products
+            <Heading
+              size={{ base: MOBILE_HEADING_SIZE, md: DESKTOP_HEADING_SIZE }}
+            >
+              About me
             </Heading>
 
             <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} gap={8}>
@@ -56,7 +60,11 @@ export default function About() {
       <Box py={{ base: 16, md: 32 }}>
         <Container maxW="8xl">
           <Stack gap={6}>
-            <Heading size="5xl">Mentorship</Heading>
+            <Heading
+              size={{ base: MOBILE_HEADING_SIZE, md: DESKTOP_HEADING_SIZE }}
+            >
+              Mentorship
+            </Heading>
             <Text fontSize="xl" lineHeight="tall" maxW="2xl">
               If you need help breaking into design or just want to chat, hit me
               up. I can't promise I have all the answers but I am a two-time

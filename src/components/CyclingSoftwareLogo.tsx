@@ -1,5 +1,6 @@
 import { Box, Image, Tooltip, Text } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
+import { shuffle } from "lodash";
 import figmaLogo from "../assets/software-logos/Figma-logo.svg";
 import cannyLogo from "../assets/software-logos/canny-logo.png";
 import chatgptLogo from "../assets/software-logos/chatgpt-logo.svg";
@@ -24,18 +25,27 @@ const logos = [
   { src: zoomLogo, alt: "Zoom" },
   { src: launchdarklyLogo, alt: "LaunchDarkly", needsInvert: true },
   { src: metabaseLogo, alt: "Metabase" },
-];
+] as const;
+
+type Logo = {
+  src: string;
+  alt: string;
+  needsInvert?: boolean;
+};
 
 export default function CyclingSoftwareLogo() {
+  const [shuffledLogos] = useState<Logo[]>(() =>
+    (shuffle as (arr: Logo[]) => Logo[])([...(logos as readonly Logo[])])
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % logos.length);
-    }, 2000); // Change logo every 3 seconds
+      setCurrentIndex((prev) => (prev + 1) % shuffledLogos.length);
+    }, 1000); // Change logo every 3 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [shuffledLogos]);
 
   return (
     <Box
@@ -51,22 +61,23 @@ export default function CyclingSoftwareLogo() {
       <Tooltip.Root positioning={{ placement: "top" }}>
         <Tooltip.Trigger asChild cursor="help">
           <Image
-            src={logos[currentIndex].src}
-            alt={logos[currentIndex].alt}
+            src={shuffledLogos[currentIndex].src}
+            alt={shuffledLogos[currentIndex].alt}
             width="100%"
             height="100%"
             objectFit="contain"
             key={currentIndex}
-            animation="fadeIn 0.5s ease-in-out"
             filter={{
               _light: "none",
-              _dark: logos[currentIndex].needsInvert ? "invert(1)" : "none",
+              _dark: shuffledLogos[currentIndex].needsInvert
+                ? "invert(1)"
+                : "none",
             }}
           />
         </Tooltip.Trigger>
         <Tooltip.Positioner>
           <Tooltip.Content>
-            <Text filter="invert(1)">{logos[currentIndex].alt}</Text>
+            <Text filter="invert(1)">{shuffledLogos[currentIndex].alt}</Text>
           </Tooltip.Content>
         </Tooltip.Positioner>
       </Tooltip.Root>

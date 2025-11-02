@@ -353,15 +353,9 @@ export default function Piracy() {
             </Box>
 
             {/* Copyright */}
-            <Text
-              fontSize="sm"
-              color="gray.500"
-              textAlign="center"
-              fontStyle="italic"
-            >
-              © 2024-2025 Nik Payne Incorporated. Some rights reserved. Most
-              rights given away freely. A few rights still figuring out what
-              they want to be.
+            <Text color="text.secondary" textAlign="center">
+              © 2025 Nik Payne Incorporated. Some rights reserved. Most given
+              away freely.
             </Text>
           </VStack>
         </Container>
