@@ -78,7 +78,9 @@ export default function ProjectCard({
 
                 <ProjectKeyResults keyResults={project.keyResults} />
 
-                {project.cta && <Box>{project.cta}</Box>}
+                {project.cta && (
+                  <Box pt={{ base: 0, lg: 2 }}>{project.cta}</Box>
+                )}
               </Stack>
             </Flex>
             <Flex flex="1" justifyContent="center">
