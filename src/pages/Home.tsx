@@ -61,13 +61,14 @@ export default function Home() {
                     // p="8"
                     // bg="white"
                     borderRadius="lg"
-                    opacity={1}
                     maxW={{
                       base: "300px",
                       md: "400px",
                       lg: "400px",
                       xl: "500px",
                     }}
+                    filter={{ _light: "none", _dark: "invert(1)" }}
+                    opacity={{ _light: 1, _dark: 0.8 }}
                   />
                 </Stack>
               </Stack>{" "}
@@ -90,7 +91,7 @@ export default function Home() {
       <Separator flex="1" />
 
       {/* Featured Projects Section */}
-      <Stack py={20} gap={12} separator={<hr />}>
+      <Stack py={20} gap={12} separator={<Separator />}>
         {projects.map((project, index) => (
           <Container maxW="8xl">
             <ProjectCard

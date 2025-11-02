@@ -50,7 +50,7 @@ export default function About() {
         </Container>
       </Box>
 
-      <Separator borderColor="black" borderWidth="1px" />
+      <Separator />
 
       {/* Mentorship Section */}
       <Box py={{ base: 16, md: 32 }}>
