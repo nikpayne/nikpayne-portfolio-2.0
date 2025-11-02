@@ -1,6 +1,7 @@
 import {
   Box,
   HStack,
+  Code,
   IconButton,
   Link,
   List,
@@ -8,7 +9,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { Code } from "lucide-react";
+import { Code as CodeIcon } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -47,13 +48,13 @@ export default function Footer() {
           <Popover.Root positioning={{ placement: "top" }}>
             <Popover.Trigger asChild>
               <IconButton variant="ghost" size="md" aria-label="Code">
-                <Code size={24} />
+                <CodeIcon size={24} />
               </IconButton>
             </Popover.Trigger>
             <Popover.Positioner>
               <Popover.Content maxW="200px">
                 <Popover.Arrow />
-                <Popover.Body>
+                <Popover.Body fontFamily="mono">
                   <Stack gap={1} fontSize="xs">
                     <List.Root pl={3}>
                       <List.Item>

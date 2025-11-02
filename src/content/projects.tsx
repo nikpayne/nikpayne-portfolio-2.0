@@ -150,7 +150,7 @@ export const projects: Project[] = [
     ),
     cta: (
       <Link href="https://gamma.app" target="_blank" rel="noreferrer">
-        <Button>Try Gamma</Button>
+        <Button size="lg">Try Gamma</Button>
       </Link>
     ),
     // extraContent: (

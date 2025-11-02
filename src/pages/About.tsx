@@ -4,6 +4,7 @@ import {
   HStack,
   Text,
   Stack,
+  Separator,
   Image,
   Container,
   SimpleGrid,
@@ -18,8 +19,8 @@ export default function About() {
   return (
     <Box position="relative">
       <Box py={{ base: 16, md: 32 }}>
-        <Container maxW="6xl">
-          <Stack gap={12} align="center">
+        <Container maxW="8xl">
+          <Stack gap={12}>
             <Image
               src={aboutImg}
               alt="About Me"
@@ -29,11 +30,7 @@ export default function About() {
               objectFit="cover"
             />
 
-            <Heading
-              size="5xl"
-              textAlign="center"
-              mb={{ base: undefined, md: 10 }}
-            >
+            <Heading size="5xl" mb={{ base: undefined, md: 10 }}>
               How I build products
             </Heading>
 
@@ -53,12 +50,12 @@ export default function About() {
         </Container>
       </Box>
 
-      <hr />
+      <Separator borderColor="black" borderWidth="1px" />
 
       {/* Mentorship Section */}
       <Box py={{ base: 16, md: 32 }}>
-        <Container maxW="5xl">
-          <Stack gap={6} align="center" textAlign="center">
+        <Container maxW="8xl">
+          <Stack gap={6}>
             <Heading size="5xl">Mentorship</Heading>
             <Text fontSize="xl" lineHeight="tall" maxW="2xl">
               If you need help breaking into design or just want to chat, hit me

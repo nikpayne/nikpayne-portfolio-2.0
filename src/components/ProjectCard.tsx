@@ -14,9 +14,21 @@ import ProjectKeyResults from "./ProjectKeyResults";
 
 interface ProjectCardProps {
   project: Project;
+  index: number;
+  totalProjects: number;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({
+  project,
+  index,
+  totalProjects,
+}: ProjectCardProps) {
+  const textStyling = {
+    fontSize: "lg",
+    color: "text.secondary",
+    fontFamily: "PP Neue Montreal Mono",
+  };
+
   return (
     <Card.Root key={project.id} variant="outline" border="none" bg="none">
       <Card.Body
@@ -29,24 +41,20 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       >
         <Stack gap={8}>
           <Stack
-            gap={8}
+            gap={{ base: 8, lg: 16 }}
             align="flex-start"
             flexDirection={{ base: "column-reverse", lg: "row" }}
           >
+            {/* <Flex flex="0.2" position="sticky" top={8}>
+              <Text {...textStyling}>{index + 1} --------</Text>
+            </Flex> */}
             <Flex flex="1">
               <Stack gap={5}>
                 <Stack gap="2">
-                  <Text
-                    fontSize="lg"
-                    color="text.secondary"
-                    fontFamily="PP Neue Montreal Mono"
-                  >
-                    {project.duration}
-                  </Text>
+                  <Text {...textStyling}>//{project.duration}</Text>
                   <Heading size="4xl" pb="1">
                     {project.title}
                   </Heading>
-
                   {/* <HStack wrap="wrap" gap={1} pt={1}>
                     {project.technologies.map((tech) => (
                       <Badge key={tech} variant="subtle" size="sm">
@@ -70,10 +78,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
                 <ProjectKeyResults keyResults={project.keyResults} />
 
-                {project.cta && <Box mt="2">{project.cta}</Box>}
+                {project.cta && <Box>{project.cta}</Box>}
               </Stack>
             </Flex>
-            <Flex flex="1">
+            <Flex flex="1" justifyContent="center">
               <Image
                 src={project.imageUrl}
                 alt={project.imageAlt}

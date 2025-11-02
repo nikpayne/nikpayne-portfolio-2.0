@@ -44,7 +44,7 @@ export const system = createSystem(defaultConfig, {
             value: { _light: "{colors.gray.500}", _dark: "{colors.gray.400}" },
           },
           tertiary: {
-            value: { _light: "{colors.gray.500}", _dark: "{colors.gray.500}" },
+            value: { _light: "{colors.gray.400}", _dark: "{colors.gray.600}" },
           },
         },
       },
