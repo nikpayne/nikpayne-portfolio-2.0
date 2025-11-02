@@ -2,6 +2,7 @@ import {
   chakra,
   Box,
   Container,
+  Grid,
   Heading,
   Link,
   Separator,

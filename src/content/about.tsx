@@ -40,9 +40,10 @@ export const values: Value[] = [
     description: (
       <Text>
         I work iteratively. I like to design enough to set a vision and avoid
-        obvious traps, then ship the clearest pieces first. Data and user
-        feedback dictate next steps. Starting small maximizes optionality and
-        lets people pull the right product out of you.
+        obvious traps, then ship the clearest pieces first—letting customer
+        feedback and metrics sort the relative priorities of what to build next.
+        Working incrementally maximizes optionality to course correct if needed,
+        and prevents us from speculating beyond the information on hand.
       </Text>
     ),
   },

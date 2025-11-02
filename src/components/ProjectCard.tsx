@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <Card.Root key={project.id} variant="outline" border="none" bg="none">
       <Card.Body
         minH="80vh"
-        py={{ base: 8, lg: 12 }}
+        py={{ base: 8, lg: "16" }}
         px={0}
         display="flex"
         flexDirection="column"
