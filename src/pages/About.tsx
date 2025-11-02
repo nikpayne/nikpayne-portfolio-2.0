@@ -22,34 +22,39 @@ export default function About() {
     <Box position="relative">
       <Box py={{ base: 16, md: 32 }}>
         <Container maxW="8xl">
-          <Stack gap={12}>
+          <Stack
+            gap={{ base: 10, lg: 16 }}
+            direction={{ base: "column-reverse", lg: "row" }}
+          >
+            <Stack gap={6}>
+              <Heading
+                size={{ base: MOBILE_HEADING_SIZE, md: DESKTOP_HEADING_SIZE }}
+              >
+                About me
+              </Heading>
+
+              <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} gap={8}>
+                {values.map((value) => (
+                  <Stack key={value.id}>
+                    <Heading size="xl" mb={3} fontWeight="bold">
+                      {value.title}
+                    </Heading>
+                    <Box fontSize="lg" flex="1.5">
+                      {value.description}
+                    </Box>
+                  </Stack>
+                ))}
+              </SimpleGrid>
+            </Stack>
             <Image
               src={aboutImg}
               alt="About Me"
-              borderTopRadius="full"
-              borderBottomRadius="l3"
+              // borderTopRadius="full"
+              // borderBottomRadius="l3"
+              borderRadius="lg"
               boxSize={{ base: "150px", md: "2xs" }}
               objectFit="cover"
             />
-
-            <Heading
-              size={{ base: MOBILE_HEADING_SIZE, md: DESKTOP_HEADING_SIZE }}
-            >
-              About me
-            </Heading>
-
-            <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} gap={8}>
-              {values.map((value) => (
-                <Stack key={value.id}>
-                  <Heading size="xl" mb={3} fontWeight="bold">
-                    {value.title}
-                  </Heading>
-                  <Box fontSize="lg" flex="1.5">
-                    {value.description}
-                  </Box>
-                </Stack>
-              ))}
-            </SimpleGrid>
           </Stack>
         </Container>
       </Box>

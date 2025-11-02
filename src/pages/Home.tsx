@@ -15,6 +15,7 @@ import Footer from "../components/Footer";
 import ProjectCard from "../components/ProjectCard";
 import CyclingSoftwareLogo from "../components/CyclingSoftwareLogo";
 import winningImg from "../assets/about/winning-son.svg";
+import winningImageAlt from "../assets/about/winning-son-alternate.svg";
 import { projects } from "../content/projects";
 
 export default function Home() {
@@ -58,7 +59,7 @@ export default function Home() {
                 <Stack>
                   <Box position="relative">
                     <Image
-                      src={winningImg}
+                      src={winningImageAlt}
                       alt="Are you winning?"
                       // p="8"
                       // bg="white"
