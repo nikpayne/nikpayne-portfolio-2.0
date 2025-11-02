@@ -10,6 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { Code as CodeIcon } from "lucide-react";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,7 +22,14 @@ export default function Footer() {
         justify="space-between"
         align="center"
       >
-        <Text fontSize="lg">© Nik Payne, {currentYear}</Text>
+        <HStack gap={6}>
+          <Text fontSize="lg">© Nik Payne, {currentYear}</Text>
+          <Text fontSize="lg">
+            <Link asChild textDecoration="underline">
+              <RouterLink to="/piracy">Piracy policy</RouterLink>
+            </Link>
+          </Text>
+        </HStack>
 
         <HStack gap={6}>
           <Text fontSize="lg">

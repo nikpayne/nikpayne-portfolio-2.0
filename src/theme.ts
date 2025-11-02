@@ -2,8 +2,19 @@ import { createSystem, defaultConfig } from "@chakra-ui/react";
 
 // Create a custom system with your theme
 export const system = createSystem(defaultConfig, {
+  globalCss: {
+    "li, [data-scope='list'][data-part='item']": {
+      fontWeight: "500",
+      color: { _light: "gray.800", _dark: "gray.400" },
+    },
+  },
   theme: {
     recipes: {
+      listItem: {
+        base: {
+          fontWeight: "500",
+        },
+      },
       text: {
         base: {
           color: { _light: "gray.800", _dark: "gray.400" },

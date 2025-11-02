@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Piracy from "./pages/Piracy";
 
 export const LIGHT_BG = "gray.100";
 export const DARK_BG = "gray.900";
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/piracy" element={<Piracy />} />
       </Routes>
       {/* <ScrollingBanner /> */}
     </Box>

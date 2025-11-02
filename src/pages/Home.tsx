@@ -13,6 +13,7 @@ import {
 import Footer from "../components/Footer";
 
 import ProjectCard from "../components/ProjectCard";
+import CyclingSoftwareLogo from "../components/CyclingSoftwareLogo";
 import winningImg from "../assets/about/winning-son.svg";
 import { projects } from "../content/projects";
 
@@ -55,21 +56,24 @@ export default function Home() {
                   </Text>
                 </Stack>
                 <Stack>
-                  <Image
-                    src={winningImg}
-                    alt="Are you winning?"
-                    // p="8"
-                    // bg="white"
-                    borderRadius="lg"
-                    maxW={{
-                      base: "300px",
-                      md: "400px",
-                      lg: "400px",
-                      xl: "500px",
-                    }}
-                    filter={{ _light: "none", _dark: "invert(1)" }}
-                    opacity={{ _light: 1, _dark: 0.8 }}
-                  />
+                  <Box position="relative">
+                    <Image
+                      src={winningImg}
+                      alt="Are you winning?"
+                      // p="8"
+                      // bg="white"
+                      borderRadius="lg"
+                      maxW={{
+                        base: "300px",
+                        md: "400px",
+                        lg: "400px",
+                        xl: "500px",
+                      }}
+                      filter={{ _light: "none", _dark: "invert(1)" }}
+                      opacity={{ _light: 1, _dark: 0.8 }}
+                    />
+                    <CyclingSoftwareLogo />
+                  </Box>
                 </Stack>
               </Stack>{" "}
               {/* 
