@@ -46,7 +46,7 @@ export default function About() {
                 ))}
               </SimpleGrid>
             </Stack>
-            <Image
+            {/* <Image
               src={aboutImg}
               alt="About Me"
               // borderTopRadius="full"
@@ -54,7 +54,7 @@ export default function About() {
               borderRadius="lg"
               boxSize={{ base: "150px", md: "2xs" }}
               objectFit="cover"
-            />
+            /> */}
           </Stack>
         </Container>
       </Box>

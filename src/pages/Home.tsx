@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <Box>
       {/* Hero Section */}
-      <Box py="20vh">
+      <Box py={{ base: "10vh", lg: "20vh" }}>
         <Container maxW="8xl">
           <Stack gap={6} align="start">
             <Stack gap={4} align="start">

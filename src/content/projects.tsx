@@ -106,6 +106,25 @@ export const gammaProjects: GammaProject[] = [
   },
 ];
 
+const StandardCTA = ({
+  href,
+  label = "Read case study",
+}: {
+  href: string;
+  label?: string;
+}) => (
+  <Link
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+    w={{ base: "full", lg: "auto" }}
+  >
+    <Button size="lg" w={{ base: "full", lg: "auto" }}>
+      {label}
+    </Button>
+  </Link>
+);
+
 export const projects: Project[] = [
   {
     id: "gamma",
@@ -148,11 +167,7 @@ export const projects: Project[] = [
         </Text>
       </Stack>
     ),
-    cta: (
-      <Link href="https://gamma.app" target="_blank" rel="noreferrer">
-        <Button size="lg">Try Gamma</Button>
-      </Link>
-    ),
+    cta: <StandardCTA href="https://gamma.app" label="Try Gamma" />,
     // extraContent: (
     //   <Table.Root size="sm" variant="line" mt={6} bg="none">
     //     <Table.Header>
@@ -247,11 +262,7 @@ export const projects: Project[] = [
         </HStack>
       </Stack>
     ),
-    cta: (
-      <Link href={campingChecklistPdf} target="_blank" rel="noreferrer">
-        <Button size="lg">Read case study</Button>
-      </Link>
-    ),
+    cta: <StandardCTA href={campingChecklistPdf} />,
   },
   {
     id: "spothero-web-renovation",
@@ -286,7 +297,7 @@ export const projects: Project[] = [
       </Stack>
     ),
     cta: (
-      <Button size="lg" disabled>
+      <Button size="lg" disabled w={{ base: "full", lg: "auto" }}>
         Case study on request
       </Button>
     ),
@@ -323,13 +334,7 @@ export const projects: Project[] = [
       </Stack>
     ),
     cta: (
-      <Link
-        href="https://www.behance.net/gallery/102456283/SpotHero-for-Android-Auto"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Button size="lg">Read case study</Button>
-      </Link>
+      <StandardCTA href="https://www.behance.net/gallery/102456283/SpotHero-for-Android-Auto" />
     ),
   },
 
@@ -377,13 +382,7 @@ export const projects: Project[] = [
       </Stack>
     ),
     cta: (
-      <Link
-        href="https://www.behance.net/gallery/96814497/SpotHero-Touchless-Parking"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Button size="lg">Read case study</Button>
-      </Link>
+      <StandardCTA href="https://www.behance.net/gallery/96814497/SpotHero-Touchless-Parking" />
     ),
   },
 
@@ -427,13 +426,7 @@ export const projects: Project[] = [
       </Stack>
     ),
     cta: (
-      <Link
-        href="https://www.behance.net/gallery/48142457/Lyft-95-The-Ridesharing-of-Yesterday"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Button size="lg">Read "case study"</Button>
-      </Link>
+      <StandardCTA href="https://www.behance.net/gallery/48142457/Lyft-95-The-Ridesharing-of-Yesterday" />
     ),
   },
 ];

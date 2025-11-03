@@ -51,35 +51,33 @@ export default function ProjectCard({
             <Flex flex="1">
               <Stack gap={5}>
                 <Stack gap="2">
-                  <Text {...textStyling}>//{project.duration}</Text>
+                  <Text {...textStyling}>{project.duration}</Text>
                   <Heading size="4xl" pb="1">
                     {project.title}
                   </Heading>
-                  {/* <HStack wrap="wrap" gap={1} pt={1}>
-                    {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="subtle" size="sm">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </HStack> */}
                 </Stack>
 
                 <Box fontSize="lg" lineHeight="tall">
                   {project.description}
                 </Box>
 
-                <HStack wrap="wrap" gap={1.5} pb={1}>
+                {/* <HStack wrap="wrap" gap={1.5} pb={1}>
                   {project.technologies.map((tech) => (
                     <Badge key={tech} variant="subtle" size="md">
                       {tech}
                     </Badge>
                   ))}
-                </HStack>
+                </HStack> */}
 
                 <ProjectKeyResults keyResults={project.keyResults} />
 
                 {project.cta && (
-                  <Box pt={{ base: 0, lg: 2 }}>{project.cta}</Box>
+                  <Stack
+                    pt={{ base: 0, lg: 3 }}
+                    align={{ base: "stretch", lg: "start" }}
+                  >
+                    {project.cta}
+                  </Stack>
                 )}
               </Stack>
             </Flex>
@@ -94,9 +92,9 @@ export default function ProjectCard({
           </Stack>
 
           {project.extraContent && (
-            <Box width="100%" mt={6}>
+            <Stack width="100%" mt={6} align={{ base: "stretch", lg: "start" }}>
               {project.extraContent}
-            </Box>
+            </Stack>
           )}
         </Stack>
       </Card.Body>

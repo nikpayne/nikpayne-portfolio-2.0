@@ -10,7 +10,7 @@ export interface Value {
 export const values: Value[] = [
   {
     id: "customer-focus",
-    title: "I am problem, and customer-obsessed",
+    title: "I am problem and customer-obsessed",
     description: (
       <Text>
         I start every morning in our support forums. "Give the people what they
