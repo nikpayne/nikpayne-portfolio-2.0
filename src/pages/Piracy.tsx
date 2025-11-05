@@ -26,7 +26,7 @@ export default function Piracy() {
                 size={{ base: "4xl", md: "6xl" }}
                 mb={{ base: 4, md: 8 }}
               >
-                Piracy Policy
+                Piracy Policy 🏴‍☠️
               </Heading>
             </Stack>
 
@@ -331,9 +331,9 @@ export default function Piracy() {
                 </Text>
                 <Text>Nik Payne Incorporated</Text>
                 <Text>Department of Fictitious Legal Affairs</Text>
-                <Text color="gray.500" fontSize="sm">
+                {/* <Text color="gray.500" fontSize="sm">
                   Email: [Your actual email if you want to include it]
-                </Text>
+                </Text> */}
               </Stack>
             </Stack>
 

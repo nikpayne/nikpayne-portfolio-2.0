@@ -5,6 +5,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Piracy from "./pages/Piracy";
+import CompoundInterestCalculator from "./pages/CompoundInterestCalculator";
 
 export const LIGHT_BG = "gray.100";
 export const DARK_BG = "gray.900";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/piracy" element={<Piracy />} />
+        <Route path="/compound" element={<CompoundInterestCalculator />} />
       </Routes>
       {/* <ScrollingBanner /> */}
     </Box>
